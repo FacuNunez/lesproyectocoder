@@ -1,0 +1,419 @@
+/**paleta de colore
+    #8E806A
+    #C3B091
+    #FFE6BC
+***/
+
+@import url('https://fonts.googleapis.com/css2?family=Thasadith&family=Trispace:wght@500&display=swap');
+
+
+/** 
+font-family: 'Thasadith', sans-serif;
+font-family: 'Trispace', sans-serif;
+***/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: white;
+}
+
+.grillaGeneral {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat (5, auto);
+    grid-template-areas: "nombre"
+        "buscador"
+        "nav"
+        "main"
+        "footer";
+}
+
+/**nombre de la empresa*/
+.nombre {
+    grid-area: nombre;
+    font-family: 'Thasadith', sans-serif;
+    font-size: 4rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: flex-start;
+}
+
+/**barra navegacion*/
+.nav {
+    grid-area: nav;
+    color: black;
+    font-family: 'Trispace', sans-serif;
+    font-weight: lighter;
+    font-size: 0.75rem;
+    padding: 0.5rem;
+}
+
+.barraNav {
+    list-style: none;
+    text-align: center;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: space-around;
+    align-items: center;
+}
+
+.barraNav li a {
+    color: black;
+    text-decoration: none;
+    display: inline-block;
+}
+
+/**buscador sign in y carrito*/
+.buscador {
+    grid-area: buscador;
+    font-family: 'Trispace', sans-serif;
+    font-size: 0.75rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: space-around;
+    justify-content: center;
+    align-items: center;
+}
+
+/*main*/
+main {
+    border: 0.50rem solid black;
+}
+
+.mainPrincipal {
+    background-image: url(../img/banner.jpeg)
+}
+
+.main {
+    grid-area: main;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding: 8rem;
+    background-color: whitesmoke;
+}
+
+
+
+/*+AMOr*/
+h2 {
+    font-family: 'Trispace', sans-serif;
+    font-size: 3rem;
+    font-weight: lighter;
+    display: flex;
+    justify-content: space-around;
+}
+
+/*coleccion*/
+.cuotas {
+    color: black;
+    font-family: 'Thasadith', sans-serif;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    display: flex;
+    justify-content: space-around;
+}
+
+/**simbolo whatsapp*/
+.whatsapp {
+
+    border: none;
+    position: sticky;
+    bottom: 0rem;
+    position: fixed;
+    left: 1rem;
+
+}
+
+.main.whatsapp:hover {
+    transform: translate(2rem);
+    transition: all (1ms);
+
+}
+
+.whatsapp:hover {
+    transform: translate(1rem);
+}
+
+
+/**productos*/
+.flexProductos {
+    display: flex;
+    align-content: flex-start;
+    justify-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.buy :hover{
+    transition: all 1.5s;
+    transform: translate(1rem, 0.5rem) ;
+}
+
+/*fotos del producto*/
+.flexProductos picture {
+    border: 0.20rem solid black;
+
+}
+
+.productos {
+    font-family: 'Thasadith', sans-serif;
+    font-style: bolder;
+    font-size: 1rem;
+
+}
+
+/*productos ofertas fragancias*/
+.superOferta {
+    color: red;
+}
+
+
+/*signin*/
+.contacto {
+    font-family: 'Thasadith', sans-serif;
+    font-size: 0.5rem;
+    font-weight: bolder;
+    text-align: left;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-content: space-around;
+    flex-wrap: wrap;
+    align-items: stretch;
+}
+
+/*footer*/
+.footer {
+    grid-area: footer;
+    color: black;
+    font-family: 'Thasadith', sans-serif;
+    font-style: lighter;
+    font-size: 0.75rem;
+    display: flex;
+    text-align: end;
+    justify-content: space-between;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: flex-end;
+    align-items: flex-end;
+}
+
+
+
+/*break point 1*/
+@media(min-width:480px) {
+
+    /*grilla general*/
+    .grillaGeneral {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat (4, 1fr);
+        grid-template-areas: "nombre nav"
+            "buscador buscador"
+            "main main"
+            "footer footer";
+
+    }
+
+    /*barra navegacion*/
+    .barraNav {
+        font-size: 1rem;
+        padding: 2.5rem;
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: nowrap;
+        align-items: center;
+        flex-direction: column;
+        align-content: center;
+    }
+
+    .barraNav li a {
+        color: black;
+        text-decoration: none;
+        display: inline-block;
+    }
+
+    /*buscador carrito compras y signin*/
+    .buscador {
+        flex-direction: row-reverse;
+        justify-content: space-around;
+    }
+
+    /*nombre de la marca*/
+    .nombre {
+        display: flex;
+        justify-content: center;
+        flex-direction: column-reverse;
+        align-items: stretch;
+    }
+
+    /*productos outlet y fragancias*/
+    .productos {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat (4, 1fr);
+        grid-template-areas: "p1 p2"
+            "p3 p4"
+            "p5 p6"
+            "p7";
+        gap: 2rem;
+        justify-items: center;
+        justify-content: center;
+    }
+
+    .p1 .p2 .p3 .p4 .p5 .p6 .p7 {
+        grid-area: p1 p2 p3 p4 p5 p6 p7
+    }
+
+
+    /*footer*/
+    .footer {
+        display: flex;
+        text-align: end;
+        justify-content: space-between;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-content: flex-end;
+        align-items: flex-end;
+
+    }
+
+    /*whatsapp*/
+    .whatsapp {
+        left: 1rem;
+        bottom: 5rem;
+    }
+
+    .main.whatsapp:hover {
+        transform: translate3d (2rem);
+        transition: all (1ms);
+
+    }
+}
+
+
+
+
+/*break point 2*/
+@media(min-width:1024px) {
+
+    /*grilla gral*/
+    .grillaGeneral {
+        grid-template-columns: 1fr auto 1fr;
+        grid-template-rows: repeat (4, 1fr);
+        grid-template-areas: "nombre nombre buscador"
+            "nav nav nav"
+            "main main main"
+            "footer footer footer";
+
+    }
+
+    /**general*/
+
+
+    /*barra navegacion*/
+    .barraNav {
+        list-style: none;
+        text-align: center;
+        padding: 0.5rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        border: none;
+    }
+
+    .barraNav li a {
+        color: black;
+        text-decoration: none;
+        display: inline-block;
+
+    }
+
+    /*nombre de la marca*/
+    .nombre {
+        padding: 6rem;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+    }
+
+    /*barra buscador, signin y carrito*/
+    .buscador {
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    /*main*/
+    .main {
+        padding: 10rem;
+    }
+
+    /*+amor*/
+    h2 {
+        font-size: 6rem;
+        margin-top: 0rem;
+    }
+
+    /*productos, outlet y fragancias*/
+    .productos {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: repeat (4, 1fr);
+        grid-template-areas: "p1 p2 p3"
+            "p4 p5 p6"
+            "p7";
+        gap: 2rem;
+        justify-items: center;
+        justify-content: center;
+    }
+
+
+
+    .p1 .p2 .p3 .p4 .p5 .p6 .p7 {
+        grid-area: p1 p2 p3 p4 p5 p6 p7
+    }
+    
+    /**productos*/
+    .flexProductos {
+        display: flex;
+        align-content: space-around;
+        justify-items: center;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+
+
+
+    /*sign in*/
+    .contacto {
+        border: 0.10rem solid black;
+        font-size: 2rem;
+        background-image: url(../img/48cef1a3790897abcc528a20705f10664cc9ebd50b977c3fd1a6831a1077134224137.png);
+        align-content: flex-start;
+        align-items: flex-start;
+    }
+
+    /*whatsapp*/
+    .whatsapp {
+        left: 1rem;
+        bottom: 6rem;
+    }
+
+    /*footer*/
+    .footer {
+        padding: 0.5rem;
+    }
+}
