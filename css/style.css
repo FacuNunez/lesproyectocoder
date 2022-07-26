@@ -28,7 +28,6 @@ header {
     grid-template-rows: repeat (5, auto);
     grid-template-areas: "nombre"
         "nav"
-        "cuotas"
         "main"
         "footer";
 }
@@ -176,9 +175,8 @@ h2 {
     /*grilla general*/
     .grillaGeneral {
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: repeat (4, 1fr);
+        grid-template-rows: repeat (3, 1fr);
         grid-template-areas: "nav nav"
-            "cuotas cuotas"
             "main main"
             "footer footer";
 
@@ -254,7 +252,6 @@ h2 {
     /*barra navegacion*/
     .nav {
         grid-area: nav;
-        
         background-color: white;
         font-family: 'Thasadith', sans-serif;
         font-weight: bolder;
