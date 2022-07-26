@@ -28,7 +28,6 @@ header {
     grid-template-rows: repeat (5, auto);
     grid-template-areas: "nombre"
         "nav"
-        "cuotas"
         "main"
         "footer";
 }
@@ -70,8 +69,6 @@ main {
     background-color: whitesmoke;
 }
 
-
-
 /*+AMOr*/
 h2 {
     font-family: 'Trispace', sans-serif;
@@ -102,16 +99,10 @@ h2 {
 
 }
 
-.main.whatsapp:hover {
-    transform: translate(2rem);
-    transition: all (1ms);
-
-}
-
 .whatsapp:hover {
     transform: translate(1rem);
+    transition: all 1s;
 }
-
 
 /**productos*/
 .flexProductos {
@@ -178,30 +169,27 @@ h2 {
     align-items: flex-end;
 }
 
-
-
 /*break point 1*/
 @media(min-width:480px) {
 
     /*grilla general*/
     .grillaGeneral {
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: repeat (4, 1fr);
+        grid-template-rows: repeat (3, 1fr);
         grid-template-areas: "nav nav"
-            "cuotas cuotas"
             "main main"
             "footer footer";
 
     }
 
     /*barra navegacion*/
-    .nav {
+    .nav{
         grid-area: nav;
         background-color: white;
         font-family: 'Thasadith', sans-serif;
         font-weight: bolder;
         font-size: 0.75rem;
-    }
+        }
 
     /*productos outlet y fragancias*/
     .productos {
@@ -247,22 +235,16 @@ h2 {
     }
 }
 
-
-
-
 /*break point 2*/
 @media(min-width:1024px) {
 
     /*grilla gral*/
     .grillaGeneral {
         grid-template-columns: 1fr auto 1fr;
-        grid-template-rows: repeat (4, 1fr);
-        grid-template-areas:
-            "nav nav nav"
-            "cuotas cuotas cuotas"
+        grid-template-rows: repeat (3, 1fr);
+        grid-template-areas: "nav nav nav"
             "main main main"
             "footer footer footer";
-
     }
 
     /**general*/
@@ -270,7 +252,6 @@ h2 {
     /*barra navegacion*/
     .nav {
         grid-area: nav;
-        
         background-color: white;
         font-family: 'Thasadith', sans-serif;
         font-weight: bolder;
@@ -301,8 +282,6 @@ h2 {
         justify-content: center;
     }
 
-
-
     .p1 .p2 .p3 .p4 .p5 .p6 .p7 {
         grid-area: p1 p2 p3 p4 p5 p6 p7
     }
@@ -317,8 +296,6 @@ h2 {
         align-items: flex-start;
         flex-wrap: wrap;
     }
-
-
 
     /*sign in*/
     .contacto {
