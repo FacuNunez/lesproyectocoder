@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Productos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/style.css">
 </head>
 
@@ -13,49 +15,40 @@
     <!--header igual para todos los html-->
 
     <header class="grillaGeneral">
-        <picture class="nombre">
-            <source media="(min-width:480px )" srcset="../img/les logo (480).jpg">
-            <source media="(min-width:1024 )" srcset="../img/les logo (1024).jpg">
-            <img src="../img/leslogo.jpg" alt="logo">
-        </picture>
-        <section class="buscador">
-            <div>
-                <!--barra de busqueda, icono de signin y carrito de compra-->
-                <img src="../img/icons8-buy-50.png" />
-                <a href="signIn.html"> <img src="../img/icons8-log-in-50.png" /></a>
+        <nav class="nav navbar navbar-expand-lg navbar-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="../index.html"> <img src="../img/leslogo.jpg" class="w-100"
+                        alt="logo"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="./productos.html">Productos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="./fragancias.html">Fragancias</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="./outlet.html">Outlet</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="signIn.html">Sing in</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="https://lesbuenosaires.empretienda.com.ar/"
+                                target="_blank">Tienda on line</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="search" aria-label="buscar">
+                        <button class="btn btn-outline-success" type="submit">Buscar</button>
+                    </form>
+                </div>
             </div>
-            <div>
-                <form>
-                    <label for="Buscador">Buscador</label>
-                    <input type="text" name="Buscador">
-                </form>
-            </div>
-        </section>
-        <!--barra de navegacion-->
-        <nav class="nav">
-            <ul class="barraNav">
-                <li>
-                    <a href="../index.html">Inicio</a>
-                </li>
-                <li>
-                    <a href="productos.html">Productos</a>
-                </li>
-                <li>
-                    <a href="../page/fragancias.html">Fragancias</a>
-                </li>
-                <li>
-                    <a href="../page/outlet.html">Outlet</a>
-                </li>
-                <li>
-                    <a href="../page/signin.html">Sign in</a>
-                </li>
-                <li>
-                    <a href="https://lesbuenosaires.empretienda.com.ar/" target="_blank">Tienda on line</a>
-                </li>
-                <li>
-                    <a href="#pie">Redes y Medios de Pago</a>
-                </li>
-            </ul>
         </nav>
     </header>
     <main class="main">
@@ -119,7 +112,6 @@
                 </form>
                 <form>
                     <img src="../img/icons8-buy-48.png" alt="comprar">
-
                 </form>
             </div>
             <div class="flexProductos p4">
@@ -141,7 +133,6 @@
                     <img src="../img/icons8-buy-48.png" alt="comprar">
                 </form>
             </div>
-
             <div class="flexProductos p5">
                 <picture>
                     <source media="(min-width:480px )" srcset="../img/babuchaengomada 480.jpeg">
@@ -211,9 +202,7 @@
             <!--link e icono de whatsapp-->
             <a href="https://www.instagram.com/les.bsas/" target="blank"><img class="redes"
                     src="../img/icons8-instagram-old-50.png" alt="instagram" /></a>
-
         </div>
-
         <div>
             <!--iconos de forma de-->
             <h4 class="pagos">Medios de Pago</h4>
@@ -223,10 +212,11 @@
             <img src="../img/icons8-bank-cards-50.png" />
             <img src="../img/icons8-money-50.png" />
         </div>
-
         <!--pie de navegacion-->
-
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+    </script>
 </body>
 
 </html>

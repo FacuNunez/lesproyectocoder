@@ -19,6 +19,7 @@ font-family: 'Trispace', sans-serif;
 
 header {
     background-color: white;
+    padding: 1rem;
 }
 
 .grillaGeneral {
@@ -26,61 +27,29 @@ header {
     grid-template-columns: 1fr;
     grid-template-rows: repeat (5, auto);
     grid-template-areas: "nombre"
-        "buscador"
         "nav"
+        "cuotas"
         "main"
         "footer";
 }
 
-/**nombre de la empresa*/
-.nombre {
-    grid-area: nombre;
-    font-family: 'Thasadith', sans-serif;
-    font-size: 4rem;
-    font-weight: bold;
-    display: flex;
-    justify-content: flex-start;
-}
-
-/**barra navegacion*/
+/*nombre y barra navegacion*/
 .nav {
     grid-area: nav;
-    color: black;
-    font-family: 'Trispace', sans-serif;
-    font-weight: lighter;
-    font-size: 0.75rem;
-    padding: 0.5rem;
+    background-color: white;
+    font-family: 'Thasadith', sans-serif;
+    font-weight: bolder;
+    font-size: 1rem;
 }
 
-.barraNav {
-    list-style: none;
-    text-align: center;
-    padding: 0.5rem;
+.navbar {
+    position: relative;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    flex-wrap: wrap;
-    align-content: space-around;
-    align-items: center;
-}
-
-.barraNav li a {
-    color: black;
-    text-decoration: none;
-    display: inline-block;
-}
-
-/**buscador sign in y carrito*/
-.buscador {
-    grid-area: buscador;
-    font-family: 'Trispace', sans-serif;
-    font-size: 0.75rem;
-    display: flex;
-    flex-direction: column;
     flex-wrap: nowrap;
-    align-content: space-around;
-    justify-content: center;
     align-items: center;
+    justify-content: space-between;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
 }
 
 /*main*/
@@ -155,9 +124,9 @@ h2 {
     align-items: center;
 }
 
-.buy :hover{
+.buy :hover {
     transition: all 1.5s;
-    transform: translate(1rem, 0.5rem) ;
+    transform: translate(1rem, 0.5rem);
 }
 
 /*fotos del producto*/
@@ -218,43 +187,20 @@ h2 {
     .grillaGeneral {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: repeat (4, 1fr);
-        grid-template-areas: "nombre nav"
-            "buscador buscador"
+        grid-template-areas: "nav nav"
+            "cuotas cuotas"
             "main main"
             "footer footer";
 
     }
 
     /*barra navegacion*/
-    .barraNav {
-        font-size: 1rem;
-        padding: 2.5rem;
-        display: flex;
-        justify-content: space-evenly;
-        flex-wrap: nowrap;
-        align-items: center;
-        flex-direction: column;
-        align-content: center;
-    }
-
-    .barraNav li a {
-        color: black;
-        text-decoration: none;
-        display: inline-block;
-    }
-
-    /*buscador carrito compras y signin*/
-    .buscador {
-        flex-direction: row-reverse;
-        justify-content: space-around;
-    }
-
-    /*nombre de la marca*/
-    .nombre {
-        display: flex;
-        justify-content: center;
-        flex-direction: column-reverse;
-        align-items: stretch;
+    .nav {
+        grid-area: nav;
+        background-color: white;
+        font-family: 'Thasadith', sans-serif;
+        font-weight: bolder;
+        font-size: 0.75rem;
     }
 
     /*productos outlet y fragancias*/
@@ -311,8 +257,9 @@ h2 {
     .grillaGeneral {
         grid-template-columns: 1fr auto 1fr;
         grid-template-rows: repeat (4, 1fr);
-        grid-template-areas: "nombre nombre buscador"
+        grid-template-areas:
             "nav nav nav"
+            "cuotas cuotas cuotas"
             "main main main"
             "footer footer footer";
 
@@ -320,38 +267,14 @@ h2 {
 
     /**general*/
 
-
     /*barra navegacion*/
-    .barraNav {
-        list-style: none;
-        text-align: center;
-        padding: 0.5rem;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-        border: none;
-    }
-
-    .barraNav li a {
-        color: black;
-        text-decoration: none;
-        display: inline-block;
-
-    }
-
-    /*nombre de la marca*/
-    .nombre {
-        padding: 6rem;
-        display: flex;
-        justify-content: center;
-        align-content: center;
-        align-items: center;
-    }
-
-    /*barra buscador, signin y carrito*/
-    .buscador {
-        flex-direction: column;
-        justify-content: space-evenly;
+    .nav {
+        grid-area: nav;
+        
+        background-color: white;
+        font-family: 'Thasadith', sans-serif;
+        font-weight: bolder;
+        font-size: 1.5rem;
     }
 
     /*main*/
@@ -383,7 +306,7 @@ h2 {
     .p1 .p2 .p3 .p4 .p5 .p6 .p7 {
         grid-area: p1 p2 p3 p4 p5 p6 p7
     }
-    
+
     /**productos*/
     .flexProductos {
         display: flex;
@@ -409,7 +332,7 @@ h2 {
     /*whatsapp*/
     .whatsapp {
         left: 1rem;
-        bottom: 6rem;
+        bottom: 8rem;
     }
 
     /*footer*/
