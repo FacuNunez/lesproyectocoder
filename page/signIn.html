@@ -35,9 +35,6 @@
                             <a class="nav-link active" href="./outlet.html">Outlet</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" href="signIn.html">Sing in</a>
-                        </li>
-                        <li class="nav-item">
                             <a class="nav-link active" href="https://lesbuenosaires.empretienda.com.ar/"
                                 target="_blank">Tienda on line</a>
                         </li>
@@ -57,38 +54,50 @@
                     src="../img/icons8-whatsapp-50.png" /></a>
         </div>
         <!--formularios de signin-->
-        <!--mail, nombre apellido-->
         <form class="contacto">
-            <label for="email">Email</label>
-            <input type="text" name="Email"><br>
-            <label for="nombre y apellido">Nombre y Apellido</label>
-            <input type="text" name="nombre y apellido"><br>
-            <label for="edad">Edad</label>
-            <!--rango etareo-->
-            <select name="edad">
-                <option value="18-24">18-24</option>
-                <option value="25-34">26-34</option>
-                <option value="35 o mas">35 o mas</option>
-            </select>
-            <br>
-            <!--observaciones-->
-            <label for="observaciones">Observaciones</label>
-            <textarea type="text" name="observaciones"></textarea>
-            <br>
-            <!--sexo-->
-            <div>Hombre</div>
-            <input type="radio" name="sexo" value="Hombre">
-            <div>Mujer</div>
-            <input type="radio" name="sexo" value="Mujer">
-            <br>
-            <!--terminos y condiciones-->
-            <div>acepta terminos y condiciones</div>
-            <input type="checkbox" name="acepta" value="1" />
-            <br>
-            <!--sign in-->
-            <input type="submit" value="Sign In" />
-            <!--delete-->
-            <input type="reset" value="Delete" />
+            <form class="row g-3">
+                <div class="col-md-6">
+                    <label for="inputEmail4" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="inputEmail4">
+                </div>
+                <div class="col-md-6">
+                    <label for="inputNombreApellido4" class="form-label">Nombre y apellido</label>
+                    <input type="password" class="form-control" id="inputNombreApellido4">
+                </div>
+                <div class="col-12">
+                    <label for="inputAddress" class="form-label">Direccion</label>
+                    <input type="text" class="form-control" id="inputAddress">
+                </div>
+                <div class="col-md-6">
+                    <label for="inputCity" class="form-label">Ciudad</label>
+                    <input type="text" class="form-control" id="inputCity">
+                </div>
+                <div class="col-md-4">
+                    <label for="inputState" class="form-label">Provincia</label>
+                    <select id="inputState" class="form-select">
+                        <option selected>Elegir</option>
+                        <option>Buenos Aires</option>
+                        <option>Entre Rios</option>
+                        <option>Cordoba</option>
+                        <option>Santa Fe</option>
+                    </select>
+                </div>
+                <div class="col-md-2">
+                    <label for="inputZip" class="form-label">Codigo Postal</label>
+                    <input type="text" class="form-control" id="inputZip">
+                </div>
+                <div class="col-12">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="gridCheck">
+                        <label class="form-check-label" for="gridCheck">
+                            Check me out
+                        </label>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <button type="submit" class="btn btn-primary">Sign in</button>
+                </div>
+            </form>
         </form>
     </main>
     <!--footer gral para todos los html-->
@@ -102,6 +111,7 @@
             <a href="https://www.instagram.com/les.bsas/" target="blank"><img class="redes"
                     src="../img/icons8-instagram-old-50.png" alt="instagram" /></a>
         </div>
+        <a class="btn btn-dark" href="signIn.html" role="button">Sign in</a>
         <div>
             <!--iconos de forma de pago-->
             <h4 class="pagos">Medios de Pago</h4>
