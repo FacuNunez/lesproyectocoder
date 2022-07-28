@@ -100,10 +100,16 @@ h2 {
 }
 
 .whatsapp:hover {
-    transform: translate(1rem);
-    transition: all 1s;
+    animation: whats 3s;
 }
+@keyframes whats{
+    10%{ transform: rotate(360deg)
+    }
+    20%{
+        transform: translateY(2rem);
+    }        
 
+}
 /**productos*/
 .flexProductos {
     display: flex;
@@ -308,7 +314,7 @@ h2 {
     /*whatsapp*/
     .whatsapp {
         left: 1rem;
-        bottom: 8rem;
+        bottom: 10rem;
     }
 
     /*footer*/
