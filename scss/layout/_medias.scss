@@ -1,0 +1,131 @@
+/*break point 1*/
+@media(min-width:480px) {
+
+    /*grilla general*/
+    .grillaGeneral {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat (3, 1fr);
+        grid-template-areas: "nav nav"
+            "main main"
+            "footer footer";
+    }
+
+    /*barra navegacion*/
+    .nav{
+        grid-area: nav;
+        background-color:$color-back;
+        font-family: $font-principal;
+        font-weight: bolder;
+        font-size: 0.75rem;
+    }
+
+    /*productos outlet y fragancias*/
+    .productos {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat (4, 1fr);
+        grid-template-areas: "p1 p2"
+            "p3 p4"
+            "p5 p6"
+            "p7";
+        gap: 2rem;
+        justify-items: center;
+        justify-content: center;
+    }
+
+    .p1 .p2 .p3 .p4 .p5 .p6 .p7 {
+        grid-area: p1 p2 p3 p4 p5 p6 p7
+    }
+
+
+    /*footer*/
+
+
+    /*whatsapp*/
+    .whatsapp {
+        right: 1rem;
+        bottom: 12rem;
+    }
+
+    footer{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center
+    }
+}
+/*break point 2*/
+@media(min-width:1024px) {
+
+    /*grilla gral*/
+    .grillaGeneral {
+        grid-template-columns: 1fr auto 1fr;
+        grid-template-rows: repeat (3, 1fr);
+        grid-template-areas: "nav nav nav"
+            "main main main"
+            "footer footer footer";
+    }
+
+    /**general*/
+
+    /*barra navegacion*/
+    .nav {
+        grid-area: nav;
+        background-color:$color-back;
+        font-family:$font-principal;
+        font-weight: bolder;
+        font-size: 1.5rem;
+    }
+
+    /*main*/
+    main {
+        padding: 12rem;   
+    }
+
+    /*+amor*/
+    h2 {
+        font-size: 6rem;
+        margin-top: 0rem;
+    }
+
+    /*productos, outlet y fragancias*/
+    .productos {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: repeat (4, 1fr);
+        grid-template-areas: "p1 p2 p3"
+            "p4 p5 p6"
+            "p7";
+        gap: 2rem;
+        justify-items: center;
+        justify-content: center;
+    }
+
+    .p1 .p2 .p3 .p4 .p5 .p6 .p7 {
+        grid-area: p1 p2 p3 p4 p5 p6 p7
+    }
+
+    /**productos*/
+    .flexProductos {
+        display: flex;
+        align-content: space-around;
+        justify-items: center;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+
+    /*sign in*/
+    .contacto {
+        padding: 8rem;
+        border: 0.10rem solid $color-letras;
+        font-size: 1.5rem;
+        background-position: none;
+        background-size: none;
+        background-repeat: none;
+    }
+}
+
+
+

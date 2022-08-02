@@ -1,0 +1,33 @@
+
+
+
+header {
+    background-color:$color-back;
+    padding: 1rem;
+    .nav {
+        grid-area: nav;
+        background-color:$color-back;
+        color:$color-letras;
+        font-family: $font-principal;
+        font-weight: bolder;
+        font-size: 1.5rem;
+        .navbar {
+            position: relative;
+            display: flex;
+            flex-wrap: nowrap;
+            align-items: center;
+            justify-content: space-between;
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
+        }    
+    }   
+}
+.grillaGeneral {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat (4, auto);
+    grid-template-areas: "nombre"
+        "nav"
+        "main"
+        "footer";
+}
