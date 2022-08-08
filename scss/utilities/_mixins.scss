@@ -1,0 +1,7 @@
+@mixin medidas ($rem){
+    padding: $rem;
+}
+
+@mixin size ($rem){
+    font-size: $rem;
+}

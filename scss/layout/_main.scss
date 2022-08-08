@@ -1,45 +1,31 @@
 main {
-    background-image: url(../img/banner.jpeg);
-    border: 0.50rem solid $color-letras;
-    color:$color-letras;
-    font-family: $font-principal;
-    font-style: bolder;
-    font-size: 1rem;
+    background-image: url(../img/2a6e491b-b417-456c-a10f-b81318bf4dd6.jpg);
+    border: 0.20rem solid $color-letras;
     grid-area: main;
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
-    padding: 8rem;
+    @include medidas (5rem);
     display: flex;
     justify-content: space-around;
     flex-direction: column;
     flex-wrap: nowrap;
     align-content: center;
     align-items: center;
-    h2 {
-        font-family: $font-secundaria;
-        font-size: 3rem;
-        font-weight: bolder;
-        color:$color-letras;
-        h3{
-            color: $color-letras;
-            font-family: $font-secundaria;
-            font-size: 1.5rem;
-            font-weight: bolder;
-            form{
-                font-family:$font-principal;
-                font-size: 0.5rem;
-                font-weight: bolder;
-                display: flex;
-                justify-content:flex-start;
-                flex-direction: column;
-                align-content: space-around;
-                flex-wrap: wrap;
-                align-items: stretch;
-            }
-        }
-    }    
+    
 }
+h2 {
+    font-family: $font-secundaria;
+    @include size (2rem);
+    font-weight: lighter;
+    color:$color-letras;
+}    
+h3{
+    @extend h2;
+    @include size (1.5rem);
+}
+        
+
 
 .whatsapp{
     border: none;
@@ -71,29 +57,20 @@ main {
         align-content: flex-start;
         justify-items: center;
         flex-direction: column;
-        justify-content: space-between;
+        justify-content: center;
         flex-wrap: nowrap;
         align-items: center;
-        picture{
-            border: 0.20rem solid $color-letras;
-            .productos {
-                font-family:$font-principal ;
-                font-style: bolder;
-                font-size: 1.3rem;
-            }
+        picture {
+            border: 0.10rem solid black;
         }
     }
 }
 
-.buy :hover {
-    transition: all 1.5s;
-    transform: translate(1rem, 0.5rem);
-}
-
 .contacto {
+    background-color:$color-precio;
+    color:$color-letras;
     font-family:$font-principal;
-    font-size: 0.5rem;
-    font-weight: bolder;
+    @include size (0.5rem);
     display: flex;
     justify-content:flex-start;
     flex-direction: column;

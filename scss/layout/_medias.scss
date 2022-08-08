@@ -16,9 +16,8 @@
         background-color:$color-back;
         font-family: $font-principal;
         font-weight: bolder;
-        font-size: 0.75rem;
+        @include size (2rem);
     }
-
     /*productos outlet y fragancias*/
     .productos {
         display: grid;
@@ -27,18 +26,16 @@
         grid-template-areas: "p1 p2"
             "p3 p4"
             "p5 p6"
-            "p7";
+            "p7 p8"
+            "p9";
         gap: 2rem;
         justify-items: center;
         justify-content: center;
     }
 
-    .p1 .p2 .p3 .p4 .p5 .p6 .p7 {
-        grid-area: p1 p2 p3 p4 p5 p6 p7
+    .p1 .p2 .p3 .p4 .p5 .p6 .p7 .p8 .p9{
+        grid-area: p1 p2 p3 p4 p5 p6 p7 p8 p9
     }
-
-
-    /*footer*/
 
 
     /*whatsapp*/
@@ -74,18 +71,23 @@
         background-color:$color-back;
         font-family:$font-principal;
         font-weight: bolder;
-        font-size: 1.5rem;
+        @include size (3rem);
     }
 
     /*main*/
     main {
-        padding: 12rem;   
+        padding: 12rem;
+    }       
+    h2{
+        @include size (5rem);
     }
-
-    /*+amor*/
-    h2 {
-        font-size: 6rem;
-        margin-top: 0rem;
+    h3{
+        @include size (2rem);
+    }
+    
+    .main h2{
+        @include size (1rem);
+        font-weight: lighter;
     }
 
     /*productos, outlet y fragancias*/
@@ -95,14 +97,14 @@
         grid-template-rows: repeat (4, 1fr);
         grid-template-areas: "p1 p2 p3"
             "p4 p5 p6"
-            "p7";
+            "p7 p8 p9";
         gap: 2rem;
         justify-items: center;
         justify-content: center;
     }
 
-    .p1 .p2 .p3 .p4 .p5 .p6 .p7 {
-        grid-area: p1 p2 p3 p4 p5 p6 p7
+    .p1 .p2 .p3 .p4 .p5 .p6 .p7 .p8 .p9 {
+        grid-area: p1 p2 p3 p4 p5 p6 p7 p8 p9;
     }
 
     /**productos*/
@@ -118,9 +120,9 @@
 
     /*sign in*/
     .contacto {
-        padding: 8rem;
+        @include medidas(5rem);
         border: 0.10rem solid $color-letras;
-        font-size: 1.5rem;
+        @include size (1.5rem);
         background-position: none;
         background-size: none;
         background-repeat: none;

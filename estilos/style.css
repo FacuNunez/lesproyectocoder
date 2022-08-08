@@ -6,24 +6,14 @@
 
 header {
   background-color: white;
-  padding: 1rem;
 }
 header .nav {
   grid-area: nav;
   background-color: white;
   color: black;
   font-family: "Thasadith", sans-serif;
-  font-weight: bolder;
+  font-weight: lighter;
   font-size: 1.5rem;
-}
-header .nav .navbar {
-  position: relative;
-  display: flex;
-  flex-wrap: nowrap;
-  align-items: center;
-  justify-content: space-between;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
 }
 
 .grillaGeneral {
@@ -34,17 +24,13 @@ header .nav .navbar {
 }
 
 main {
-  background-image: url(../img/banner.jpeg);
-  border: 0.5rem solid black;
-  color: black;
-  font-family: "Thasadith", sans-serif;
-  font-style: bolder;
-  font-size: 1rem;
+  background-image: url(../img/2a6e491b-b417-456c-a10f-b81318bf4dd6.jpg);
+  border: 0.2rem solid black;
   grid-area: main;
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
-  padding: 8rem;
+  padding: 5rem;
   display: flex;
   justify-content: space-around;
   flex-direction: column;
@@ -52,28 +38,16 @@ main {
   align-content: center;
   align-items: center;
 }
-main h2 {
+
+h2, h3 {
   font-family: "Trispace", sans-serif;
-  font-size: 3rem;
-  font-weight: bolder;
+  font-size: 2rem;
+  font-weight: lighter;
   color: black;
 }
-main h2 h3 {
-  color: black;
-  font-family: "Trispace", sans-serif;
+
+h3 {
   font-size: 1.5rem;
-  font-weight: bolder;
-}
-main h2 h3 form {
-  font-family: "Thasadith", sans-serif;
-  font-size: 0.5rem;
-  font-weight: bolder;
-  display: flex;
-  justify-content: flex-start;
-  flex-direction: column;
-  align-content: space-around;
-  flex-wrap: wrap;
-  align-items: stretch;
 }
 
 .whatsapp {
@@ -120,28 +94,19 @@ main h2 h3 form {
   align-content: flex-start;
   justify-items: center;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: nowrap;
   align-items: center;
 }
 .main .flexProductos picture {
-  border: 0.2rem solid black;
-}
-.main .flexProductos picture .productos {
-  font-family: "Thasadith", sans-serif;
-  font-style: bolder;
-  font-size: 1.3rem;
-}
-
-.buy :hover {
-  transition: all 1.5s;
-  transform: translate(1rem, 0.5rem);
+  border: 0.1rem solid black;
 }
 
 .contacto {
+  background-color: darkgray;
+  color: black;
   font-family: "Thasadith", sans-serif;
   font-size: 0.5rem;
-  font-weight: bolder;
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
@@ -165,6 +130,7 @@ footer {
   align-items: flex-start;
   align-content: flex-start;
   gap: 2rem;
+  background-image: linear-gradient(to bottom, white, grey);
 }
 
 /*break point 1*/
@@ -181,22 +147,21 @@ footer {
     background-color: white;
     font-family: "Thasadith", sans-serif;
     font-weight: bolder;
-    font-size: 0.75rem;
+    font-size: 2rem;
   }
   /*productos outlet y fragancias*/
   .productos {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: repeat 4, 1fr;
-    grid-template-areas: "p1 p2" "p3 p4" "p5 p6" "p7";
+    grid-template-areas: "p1 p2" "p3 p4" "p5 p6" "p7 p8" "p9";
     gap: 2rem;
     justify-items: center;
     justify-content: center;
   }
-  .p1 .p2 .p3 .p4 .p5 .p6 .p7 {
-    grid-area: p1 p2 p3 p4 p5 p6 p7;
+  .p1 .p2 .p3 .p4 .p5 .p6 .p7 .p8 .p9 {
+    grid-area: p1 p2 p3 p4 p5 p6 p7 p8 p9;
   }
-  /*footer*/
   /*whatsapp*/
   .whatsapp {
     right: 1rem;
@@ -224,29 +189,34 @@ footer {
     background-color: white;
     font-family: "Thasadith", sans-serif;
     font-weight: bolder;
-    font-size: 1.5rem;
+    font-size: 3rem;
   }
   /*main*/
   main {
     padding: 12rem;
   }
-  /*+amor*/
-  h2 {
-    font-size: 6rem;
-    margin-top: 0rem;
+  h2, h3 {
+    font-size: 5rem;
+  }
+  h3 {
+    font-size: 2rem;
+  }
+  .main h2, .main h3 {
+    font-size: 1rem;
+    font-weight: lighter;
   }
   /*productos, outlet y fragancias*/
   .productos {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: repeat 4, 1fr;
-    grid-template-areas: "p1 p2 p3" "p4 p5 p6" "p7";
+    grid-template-areas: "p1 p2 p3" "p4 p5 p6" "p7 p8 p9";
     gap: 2rem;
     justify-items: center;
     justify-content: center;
   }
-  .p1 .p2 .p3 .p4 .p5 .p6 .p7 {
-    grid-area: p1 p2 p3 p4 p5 p6 p7;
+  .p1 .p2 .p3 .p4 .p5 .p6 .p7 .p8 .p9 {
+    grid-area: p1 p2 p3 p4 p5 p6 p7 p8 p9;
   }
   /**productos*/
   .flexProductos {
@@ -260,7 +230,7 @@ footer {
   }
   /*sign in*/
   .contacto {
-    padding: 8rem;
+    padding: 5rem;
     border: 0.1rem solid black;
     font-size: 1.5rem;
     background-position: none;

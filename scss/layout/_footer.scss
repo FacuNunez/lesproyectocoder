@@ -3,9 +3,9 @@ footer {
     background-color: $color-back;
     color:$color-letras;
     font-family:$font-secundaria;
-    font-size: 2rem;
+    @include size (2rem);
     font-weight: bolder;
-    padding: 2rem;
+    @include medidas (2rem);
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -13,4 +13,5 @@ footer {
     align-items: flex-start;
     align-content: flex-start;
     gap: 2rem;
+    background-image: linear-gradient(to bottom, white, grey);
 }
