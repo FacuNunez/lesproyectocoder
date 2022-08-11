@@ -18,6 +18,58 @@
         font-weight: bolder;
         @include size (2rem);
     }
+    h1{
+        font-family:$font-principal;
+        @include size (4rem);
+        color:$color-back;
+    }    
+
+    h2{
+        @include size (2rem);
+        font-weight: bolder;
+    }
+
+    h3{
+        @include size (1rem);
+    }
+    .main{
+        padding: 5rem;
+    }
+    .main h1{
+        font-family:$font-principal;
+        @include size (4rem);
+        font-weight: lighter;
+        color: $color-precio;
+        text-align: center;
+        margin-bottom: 0rem;       
+    }
+    .main h2{
+        font-family:$font-principal;
+        @include size (1.5rem);
+        font-weight: lighter;
+        color: $color-precio;
+        text-align: center;
+    }
+    .main h3{
+        font-family:$font-secundaria;
+        @include size (1.5rem);
+        font-weight: lighter;
+        color: $color-precio;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+    .main h4{
+        font-family:$font-secundaria;
+        @include size (1rem);
+        font-weight: lighter;
+        color:$color-letras;
+    }
+    .main h5{
+        font-family:$font-secundaria;
+        @include size (1rem);
+        font-weight: lighter;
+        color:$color-letras ;
+    }
     /*productos outlet y fragancias*/
     .productos {
         display: grid;
@@ -76,18 +128,59 @@
 
     /*main*/
     main {
-        padding: 12rem;
-    }       
+        height: 100%;
+        width: 100%;
+        padding: 10rem;
+    } 
+    h1{
+        font-family:$font-principal;
+        @include size (6rem);
+        color:$color-back;
+    }    
     h2{
-        @include size (5rem);
+        @include size (3rem);
+        font-weight: bolder;
     }
     h3{
         @include size (2rem);
     }
-    
-    .main h2{
-        @include size (1rem);
+    .main{
+        padding: 5rem;
+    }
+    .main h1{
+        font-family:$font-principal;
+        @include size (6rem);
         font-weight: lighter;
+        color: $color-precio;
+        text-align: center;
+        margin-bottom: 0rem;       
+    }
+    .main h2{
+        font-family:$font-principal;
+        @include size (2rem);
+        font-weight: lighter;
+        color: $color-precio;
+        text-align: center;
+    }
+    .main h3{
+        font-family:$font-secundaria;
+        @include size (2rem);
+        font-weight: lighter;
+        color: $color-precio;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+    .main h4{
+        font-family:$font-secundaria;
+        @include size (1.5rem);
+        font-weight: lighter;
+        color:$color-letras;
+    }
+    .main h5{
+        font-family:$font-secundaria;
+        @include size (1.5rem);
+        font-weight: lighter;
+        color:$color-letras ;
     }
 
     /*productos, outlet y fragancias*/

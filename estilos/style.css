@@ -39,10 +39,16 @@ main {
   align-items: center;
 }
 
+h1, .main h2, .main h3 {
+  font-family: "Thasadith", sans-serif;
+  font-size: 4rem;
+  color: white;
+}
+
 h2, h3 {
   font-family: "Trispace", sans-serif;
   font-size: 2rem;
-  font-weight: lighter;
+  font-weight: bolder;
   color: black;
 }
 
@@ -81,7 +87,6 @@ h3 {
 
 .main {
   background-image: none;
-  background-image: none;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
@@ -97,9 +102,39 @@ h3 {
   justify-content: center;
   flex-wrap: nowrap;
   align-items: center;
+  margin-bottom: 1rem;
 }
 .main .flexProductos picture {
   border: 0.1rem solid black;
+}
+
+.main h1, .main h2, .main h3 {
+  font-family: "Thasadith", sans-serif;
+  font-size: 2rem;
+  font-weight: lighter;
+  color: darkgray;
+  text-align: center;
+  margin-bottom: 0rem;
+}
+
+.main h2, .main h3 {
+  font-size: 1.5rem;
+}
+
+.main h3 {
+  font-family: "Trispace", sans-serif;
+  font-size: 1.5rem;
+  font-weight: lighter;
+  color: darkgray;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.main h4, .main h5 {
+  font-family: "Trispace", sans-serif;
+  font-size: 1rem;
+  font-weight: lighter;
+  color: black;
 }
 
 .contacto {
@@ -149,6 +184,56 @@ footer {
     font-weight: bolder;
     font-size: 2rem;
   }
+  h1, .main h2, .main h3 {
+    font-family: "Thasadith", sans-serif;
+    font-size: 4rem;
+    color: white;
+  }
+  h2, h3 {
+    font-size: 2rem;
+    font-weight: bolder;
+  }
+  h3 {
+    font-size: 1rem;
+  }
+  .main {
+    padding: 5rem;
+  }
+  .main h1, .main h2, .main h3 {
+    font-family: "Thasadith", sans-serif;
+    font-size: 4rem;
+    font-weight: lighter;
+    color: darkgray;
+    text-align: center;
+    margin-bottom: 0rem;
+  }
+  .main h2, .main h3 {
+    font-family: "Thasadith", sans-serif;
+    font-size: 1.5rem;
+    font-weight: lighter;
+    color: darkgray;
+    text-align: center;
+  }
+  .main h3 {
+    font-family: "Trispace", sans-serif;
+    font-size: 1.5rem;
+    font-weight: lighter;
+    color: darkgray;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  .main h4, .main h5 {
+    font-family: "Trispace", sans-serif;
+    font-size: 1rem;
+    font-weight: lighter;
+    color: black;
+  }
+  .main h5 {
+    font-family: "Trispace", sans-serif;
+    font-size: 1rem;
+    font-weight: lighter;
+    color: black;
+  }
   /*productos outlet y fragancias*/
   .productos {
     display: grid;
@@ -193,17 +278,59 @@ footer {
   }
   /*main*/
   main {
-    padding: 12rem;
+    height: 100%;
+    width: 100%;
+    padding: 10rem;
+  }
+  h1, .main h2, .main h3 {
+    font-family: "Thasadith", sans-serif;
+    font-size: 6rem;
+    color: white;
   }
   h2, h3 {
-    font-size: 5rem;
+    font-size: 3rem;
+    font-weight: bolder;
   }
   h3 {
     font-size: 2rem;
   }
-  .main h2, .main h3 {
-    font-size: 1rem;
+  .main {
+    padding: 5rem;
+  }
+  .main h1, .main h2, .main h3 {
+    font-family: "Thasadith", sans-serif;
+    font-size: 6rem;
     font-weight: lighter;
+    color: darkgray;
+    text-align: center;
+    margin-bottom: 0rem;
+  }
+  .main h2, .main h3 {
+    font-family: "Thasadith", sans-serif;
+    font-size: 2rem;
+    font-weight: lighter;
+    color: darkgray;
+    text-align: center;
+  }
+  .main h3 {
+    font-family: "Trispace", sans-serif;
+    font-size: 2rem;
+    font-weight: lighter;
+    color: darkgray;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  .main h4, .main h5 {
+    font-family: "Trispace", sans-serif;
+    font-size: 1.5rem;
+    font-weight: lighter;
+    color: black;
+  }
+  .main h5 {
+    font-family: "Trispace", sans-serif;
+    font-size: 1.5rem;
+    font-weight: lighter;
+    color: black;
   }
   /*productos, outlet y fragancias*/
   .productos {

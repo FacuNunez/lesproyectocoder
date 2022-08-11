@@ -14,10 +14,15 @@ main {
     align-items: center;
     
 }
+h1{
+    font-family:$font-principal;
+    @include size (4rem);
+    color:$color-back;
+}
 h2 {
     font-family: $font-secundaria;
     @include size (2rem);
-    font-weight: lighter;
+    font-weight: bolder;
     color:$color-letras;
 }    
 h3{
@@ -44,15 +49,14 @@ h3{
     }    
 }
 .main{
-    background-image: none;
-    background-image: none;
+    background-image:none;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
     align-content: center;
     justify-content: center;
     align-items: stretch;
-    .flexProductos {
+        .flexProductos {
         display: flex;
         align-content: flex-start;
         justify-items: center;
@@ -60,11 +64,43 @@ h3{
         justify-content: center;
         flex-wrap: nowrap;
         align-items: center;
+        margin-bottom: 1rem;
         picture {
             border: 0.10rem solid black;
         }
     }
+}   
+
+.main h1{
+    font-family:$font-principal;
+    @include size (2rem);
+    font-weight: lighter;
+    color: $color-precio;
+    text-align: center;
+    margin-bottom: 0rem;       
 }
+.main h2{
+    @extend h1;
+    @include size (1.5rem);
+}    
+    
+.main h3{
+    font-family:$font-secundaria;
+    @include size (1.5rem);
+    font-weight: lighter;
+    color: $color-precio;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.main h4{
+    font-family:$font-secundaria;
+    @include size (1rem);
+    font-weight: lighter;
+    color:$color-letras;
+}
+.main h5{
+    @extend h4;
+}    
 
 .contacto {
     background-color:$color-precio;
