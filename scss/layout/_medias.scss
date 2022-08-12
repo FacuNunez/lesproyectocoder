@@ -149,7 +149,7 @@
     }
     .main h1{
         font-family:$font-principal;
-        @include size (6rem);
+        @include size (3rem);
         font-weight: lighter;
         color: $color-precio;
         text-align: center;
