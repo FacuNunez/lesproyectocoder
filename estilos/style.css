@@ -16,6 +16,62 @@ header .nav {
   font-size: 1.5rem;
 }
 
+input[type=checkbox] {
+  -webkit-appearance: none;
+  display: none;
+  visibility: hidden;
+}
+
+.bar {
+  position: relative;
+  cursor: pointer;
+  width: 50px;
+  height: 40px;
+}
+
+.bar span {
+  position: absolute;
+  width: 45px;
+  height: 7px;
+  background: black;
+  border-radius: 100px;
+  display: inline-block;
+  transition: 0.3s ease;
+  left: 0;
+}
+
+.bar span.top {
+  top: 0;
+}
+
+.bar span.middle {
+  top: 17px;
+}
+
+.bar span.bottom {
+  bottom: 0;
+}
+
+input[type]:checked ~ span.top {
+  transform: rotate(45deg);
+  transform-origin: top left;
+  width: 48px;
+  left: 5px;
+}
+
+input[type]:checked ~ span.bottom {
+  transform: rotate(-45deg);
+  transform-origin: top left;
+  width: 48px;
+  bottom: -1px;
+  box-shadow: 0 0 10px white;
+}
+
+input[type]:checked ~ span.middle {
+  transform: translateX(-20px);
+  opacity: 0;
+}
+
 .grillaGeneral {
   display: grid;
   grid-template-columns: 1fr;
@@ -24,13 +80,15 @@ header .nav {
 }
 
 main {
+  width: 100%;
+  height: 100%;
   background-image: url(../img/2a6e491b-b417-456c-a10f-b81318bf4dd6.jpg);
   border: 0.2rem solid black;
   grid-area: main;
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
-  padding: 5rem;
+  padding: 8rem;
   display: flex;
   justify-content: space-around;
   flex-direction: column;
@@ -86,13 +144,14 @@ h3 {
 }
 
 .main {
+  padding: 3rem;
   background-image: none;
   display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   align-content: center;
   justify-content: center;
-  align-items: stretch;
+  align-items: center;
+  background-image: linear-gradient(to bottom, white, darkgray);
 }
 .main .flexProductos {
   display: flex;
@@ -104,12 +163,9 @@ h3 {
   align-items: center;
   margin-bottom: 1rem;
 }
-.main .flexProductos picture {
-  border: 0.1rem solid black;
-}
 
 .main h1, .main h2, .main h3 {
-  font-family: "Thasadith", sans-serif;
+  font-family: "Quicksand";
   font-size: 2rem;
   font-weight: lighter;
   color: darkgray;
@@ -130,15 +186,40 @@ h3 {
   margin-bottom: 2rem;
 }
 
-.main h4, .main h5 {
+.main h4, .main p, .main h5 {
   font-family: "Trispace", sans-serif;
   font-size: 1rem;
   font-weight: lighter;
   color: black;
 }
 
-.contacto {
+.main p {
+  border: 1rem solid transparent;
   background-color: darkgray;
+  color: black;
+  font-weight: bolder;
+  font-size: 0.75rem;
+}
+
+picture .card {
+  width: 190px;
+  height: 254px;
+  background: white;
+  border-radius: 10px;
+  transition: border-radius 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.shadow {
+  box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px rgb(190, 190, 190), 0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+}
+
+.card-img, .card-img-bottom, .card-img-top {
+  width: 100%;
+  margin: 0.25rem 0rem 0 0.75rem;
+}
+
+.contacto {
+  background-image: linear-gradient(to bottom, white, darkgray);
   color: black;
   font-family: "Thasadith", sans-serif;
   font-size: 0.5rem;
@@ -152,7 +233,7 @@ h3 {
 
 /*footer*/
 footer {
-  background-color: white;
+  background-color: darkgray;
   color: black;
   font-family: "Trispace", sans-serif;
   font-size: 2rem;
@@ -165,7 +246,12 @@ footer {
   align-items: flex-start;
   align-content: flex-start;
   gap: 2rem;
-  background-image: linear-gradient(to bottom, white, grey);
+}
+
+p {
+  color: black;
+  font-family: "Trispace", sans-serif;
+  font-size: 0.5rem;
 }
 
 /*break point 1*/
@@ -184,6 +270,11 @@ footer {
     font-weight: bolder;
     font-size: 2rem;
   }
+  main {
+    height: 100%;
+    width: 100%;
+    padding: 10rem;
+  }
   h1, .main h2, .main h3 {
     font-family: "Thasadith", sans-serif;
     font-size: 4rem;
@@ -196,12 +287,19 @@ footer {
   h3 {
     font-size: 1rem;
   }
-  .main {
-    padding: 5rem;
+  .main .flexProductos {
+    display: flex;
+    align-content: flex-start;
+    justify-items: center;
+    flex-direction: column;
+    justify-content: flex-end;
+    flex-wrap: nowrap;
+    align-items: center;
+    margin-bottom: 1rem;
   }
   .main h1, .main h2, .main h3 {
     font-family: "Thasadith", sans-serif;
-    font-size: 4rem;
+    font-size: 2.5rem;
     font-weight: lighter;
     color: darkgray;
     text-align: center;
@@ -209,38 +307,46 @@ footer {
   }
   .main h2, .main h3 {
     font-family: "Thasadith", sans-serif;
-    font-size: 1.5rem;
+    font-size: 1rem;
     font-weight: lighter;
     color: darkgray;
     text-align: center;
   }
   .main h3 {
     font-family: "Trispace", sans-serif;
-    font-size: 1.5rem;
+    font-size: 1rem;
     font-weight: lighter;
     color: darkgray;
     text-align: center;
     margin-bottom: 2rem;
   }
-  .main h4, .main h5 {
+  .main h4, .main h5, .main p {
     font-family: "Trispace", sans-serif;
-    font-size: 1rem;
+    font-size: 0.75rem;
     font-weight: lighter;
     color: black;
   }
   .main h5 {
     font-family: "Trispace", sans-serif;
-    font-size: 1rem;
+    font-size: 0.75rem;
     font-weight: lighter;
     color: black;
+  }
+  .main p {
+    background-color: darkgray;
+    color: black;
+    font-weight: bolder;
+    font-size: 0.75rem;
   }
   /*productos outlet y fragancias*/
   .productos {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat 4, 1fr;
-    grid-template-areas: "p1 p2" "p3 p4" "p5 p6" "p7 p8" "p9";
-    gap: 2rem;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat 6, 1fr;
+    grid-template-areas: "p1 . p2" ". p3 ." "p4 . p5" ". p6 . " "p7 . p8" ". p9 . ";
+    width: 100%;
+    height: 100%;
+    gap: 0.5rem;
     justify-items: center;
     justify-content: center;
   }
@@ -249,25 +355,25 @@ footer {
   }
   /*whatsapp*/
   .whatsapp {
-    right: 1rem;
-    bottom: 12rem;
+    right: 0.25rem;
+    bottom: 14rem;
   }
   footer {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
   }
 }
 /*break point 2*/
 @media (min-width: 1024px) {
-  /*grilla gral*/
-  .grillaGeneral {
+  grilla gral .grillaGeneral {
     grid-template-columns: 1fr auto 1fr;
     grid-template-rows: repeat 3, 1fr;
     grid-template-areas: "nav nav nav" "main main main" "footer footer footer";
   }
-  /**general*/
+  /*general*/
   /*barra navegacion*/
   .nav {
     grid-area: nav;
@@ -299,7 +405,7 @@ footer {
   }
   .main h1, .main h2, .main h3 {
     font-family: "Thasadith", sans-serif;
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-weight: lighter;
     color: darkgray;
     text-align: center;
@@ -307,37 +413,43 @@ footer {
   }
   .main h2, .main h3 {
     font-family: "Thasadith", sans-serif;
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: lighter;
     color: darkgray;
     text-align: center;
   }
   .main h3 {
     font-family: "Trispace", sans-serif;
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: lighter;
     color: darkgray;
     text-align: center;
     margin-bottom: 2rem;
   }
-  .main h4, .main h5 {
+  .main h4, .main h5, .main p {
     font-family: "Trispace", sans-serif;
-    font-size: 1.5rem;
+    font-size: 1rem;
     font-weight: lighter;
     color: black;
   }
   .main h5 {
     font-family: "Trispace", sans-serif;
-    font-size: 1.5rem;
+    font-size: 1rem;
     font-weight: lighter;
     color: black;
+  }
+  .main p {
+    background-color: darkgray;
+    color: black;
+    font-weight: bolder;
+    font-size: 0.75rem;
   }
   /*productos, outlet y fragancias*/
   .productos {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: repeat 4, 1fr;
-    grid-template-areas: "p1 p2 p3" "p4 p5 p6" "p7 p8 p9";
+    grid-template-rows: repeat 5, auto;
+    grid-template-areas: "p1 . p2" "p3 . p4" "p5 . p6" "p7 . p8" ". p9 .";
     gap: 2rem;
     justify-items: center;
     justify-content: center;
@@ -345,8 +457,7 @@ footer {
   .p1 .p2 .p3 .p4 .p5 .p6 .p7 .p8 .p9 {
     grid-area: p1 p2 p3 p4 p5 p6 p7 p8 p9;
   }
-  /**productos*/
-  .flexProductos {
+  productos .flexProductos {
     display: flex;
     align-content: space-around;
     justify-items: center;
@@ -355,8 +466,7 @@ footer {
     align-items: flex-start;
     flex-wrap: wrap;
   }
-  /*sign in*/
-  .contacto {
+  sign in .contacto {
     padding: 5rem;
     border: 0.1rem solid black;
     font-size: 1.5rem;

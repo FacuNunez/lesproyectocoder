@@ -19,10 +19,15 @@
         <nav class="nav navbar navbar-expand-lg navbar-light">
             <div class="container-fluid">
                 <a class="navbar-brand" href="index.html"> <img src="./img/leslogo.jpg" class="w-100" alt="logo"></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                <button class="navbar-toggler dark" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+                    <label for="check" class="bar">
+                        <input id="check" type="checkbox">
+                        <span class="top"></span>
+                        <span class="middle"></span>
+                        <span class="bottom"></span>
+                    </label>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
@@ -35,15 +40,37 @@
                         <li class="nav-item">
                             <a class="nav-link active" href="page/outlet.html">Outlet</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" href="https://lesbuenosaires.empretienda.com.ar/"
-                                target="_blank">Tienda on line</a>
-                        </li>
                     </ul>
-                    <form class="d-flex">
-                        <input class="form-control me-2" type="search" aria-label="buscar">
-                        <button class="btn btn-outline-success" type="submit">Buscar</button>
-                    </form>
+                    <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                        data-bs-whatever="@fat">Ingresar</button>
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <form>
+                                        <div class="mb-2">
+                                            <label for="recipient-name" class="col-form-label">Email</label>
+                                            <input type="text" class="form-control" id="recipient-name">
+                                        </div>
+                                        <div class="mb-2">
+                                            <label for="recipient-name" class="col-form-label">Contraseña</label>
+                                            <input type="text" class="form-control" id="recipient-name">
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-darkgrey" data-bs-dismiss="modal">Log
+                                        out</button>
+                                    <button type="button" class="btn btn-dark">Log in</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </nav>
@@ -68,7 +95,8 @@
             <a href="https://www.instagram.com/les.bsas/" target="blank"><img class="redes"
                     src="img/icons8-instagram-old-50.png" alt="instagram" /></a>
         </div>
-        <a class="btn btn-dark" href="./page/signIn.html" role="button">Sign in</a>
+        <a class="btn btn-dark" href="./page/signIn.html" role="button">Registrate</a>
+
         <!--iconos de formas de pago-->
         <div>
             <h4 class="pagos">Medios de Pago</h4>
@@ -83,6 +111,10 @@
             <a href="https://www.mercadopago.com.ar/" target="blank"><img src="./img/icons8-money-50.png"
                     alt="medios de pago" /></a>
         </div>
+        <p>
+            © Copyright - 2022 , TODOS LOS DERECHOS RESERVADOS. Las fotos contenidas en este site, el logotipo y las
+            marcas son propiedad de Les Buenos Aires y/o de sus respectivos titulares. Está prohibida la reproducción
+            total o parcial, sin la expresa autorización de la administradora de la tienda virtual.</p>
         <!--pie de navegacion-->
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
