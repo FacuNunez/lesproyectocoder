@@ -1,4 +1,6 @@
 main {
+    width: 100%;
+    height: 100%;
     background-image: url(../img/2a6e491b-b417-456c-a10f-b81318bf4dd6.jpg);
     border: 0.20rem solid $color-letras;
     grid-area: main;
@@ -14,6 +16,15 @@ main {
     align-items: center;
     
 }
+.cardSombra {
+    width: 190px;
+    height: 254px;
+    border-radius: 30px;
+    background:#ddd9d9;
+    box-shadow: 15px 15px 30px #302e2e,
+                -15px -15px 30px #ffffff;
+}
+
 h1{
     font-family:$font-principal;
     @include size (4rem);
@@ -48,27 +59,16 @@ h3{
         }
     }    
 }
+
 .main{
+    width: 100%;
+    height: 100%;
     background-image:none;
     display: flex;
     flex-direction: column;
-    flex-wrap: nowrap;
     align-content: center;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: stretch;
-        .flexProductos {
-        display: flex;
-        align-content: flex-start;
-        justify-items: center;
-        flex-direction: column;
-        justify-content: center;
-        flex-wrap: nowrap;
-        align-items: center;
-        margin-bottom: 1rem;
-        picture {
-            border: 0.10rem solid black;
-        }
-    }
 }   
 
 .main h1{
@@ -101,7 +101,23 @@ h3{
 .main h5{
     @extend h4;
 }    
-
+.productos {
+    display: grid;
+    grid-template-columns: 1fr ;
+    grid-template-rows: repeat (9, 1fr);
+    grid-template-areas: "p1"
+        "p2"
+        "p3"
+        "p4"
+        "p5"
+        "p6"
+        "p7"
+        "p8"
+        "p9";
+    gap: 8rem;
+    justify-items: center;
+    justify-content: center;
+}
 .contacto {
     background-color:$color-precio;
     color:$color-letras;

@@ -64,7 +64,7 @@ input[type]:checked ~ span.bottom {
   transform-origin: top left;
   width: 48px;
   bottom: -1px;
-  box-shadow: 0 0 10px white;
+  box-shadow: 0 0 10px darkgray;
 }
 
 input[type]:checked ~ span.middle {
@@ -88,13 +88,21 @@ main {
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
-  padding: 8rem;
+  padding: 5rem;
   display: flex;
   justify-content: space-around;
   flex-direction: column;
   flex-wrap: nowrap;
   align-content: center;
   align-items: center;
+}
+
+.cardSombra {
+  width: 190px;
+  height: 254px;
+  border-radius: 30px;
+  background: #ddd9d9;
+  box-shadow: 15px 15px 30px #302e2e, -15px -15px 30px #ffffff;
 }
 
 h1, .main h2, .main h3 {
@@ -144,28 +152,18 @@ h3 {
 }
 
 .main {
-  padding: 3rem;
+  width: 100%;
+  height: 100%;
   background-image: none;
   display: flex;
-  flex-wrap: wrap;
-  align-content: center;
-  justify-content: center;
-  align-items: center;
-  background-image: linear-gradient(to bottom, white, darkgray);
-}
-.main .flexProductos {
-  display: flex;
-  align-content: flex-start;
-  justify-items: center;
   flex-direction: column;
-  justify-content: center;
-  flex-wrap: nowrap;
-  align-items: center;
-  margin-bottom: 1rem;
+  align-content: center;
+  justify-content: flex-start;
+  align-items: stretch;
 }
 
 .main h1, .main h2, .main h3 {
-  font-family: "Quicksand";
+  font-family: "Thasadith", sans-serif;
   font-size: 2rem;
   font-weight: lighter;
   color: darkgray;
@@ -186,40 +184,25 @@ h3 {
   margin-bottom: 2rem;
 }
 
-.main h4, .main p, .main h5 {
+.main h4, .main h5 {
   font-family: "Trispace", sans-serif;
   font-size: 1rem;
   font-weight: lighter;
   color: black;
 }
 
-.main p {
-  border: 1rem solid transparent;
-  background-color: darkgray;
-  color: black;
-  font-weight: bolder;
-  font-size: 0.75rem;
-}
-
-picture .card {
-  width: 190px;
-  height: 254px;
-  background: white;
-  border-radius: 10px;
-  transition: border-radius 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-.shadow {
-  box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px rgb(190, 190, 190), 0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
-}
-
-.card-img, .card-img-bottom, .card-img-top {
-  width: 100%;
-  margin: 0.25rem 0rem 0 0.75rem;
+.productos {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat 9, 1fr;
+  grid-template-areas: "p1" "p2" "p3" "p4" "p5" "p6" "p7" "p8" "p9";
+  gap: 8rem;
+  justify-items: center;
+  justify-content: center;
 }
 
 .contacto {
-  background-image: linear-gradient(to bottom, white, darkgray);
+  background-color: darkgray;
   color: black;
   font-family: "Thasadith", sans-serif;
   font-size: 0.5rem;
@@ -233,7 +216,6 @@ picture .card {
 
 /*footer*/
 footer {
-  background-color: darkgray;
   color: black;
   font-family: "Trispace", sans-serif;
   font-size: 2rem;
@@ -242,15 +224,16 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   align-items: flex-start;
-  align-content: flex-start;
+  align-content: center;
   gap: 2rem;
+  background-image: linear-gradient(to bottom, white, darkgray);
 }
 
 p {
-  color: black;
   font-family: "Trispace", sans-serif;
+  color: black;
   font-size: 0.5rem;
 }
 
@@ -270,11 +253,6 @@ p {
     font-weight: bolder;
     font-size: 2rem;
   }
-  main {
-    height: 100%;
-    width: 100%;
-    padding: 10rem;
-  }
   h1, .main h2, .main h3 {
     font-family: "Thasadith", sans-serif;
     font-size: 4rem;
@@ -287,19 +265,12 @@ p {
   h3 {
     font-size: 1rem;
   }
-  .main .flexProductos {
-    display: flex;
-    align-content: flex-start;
-    justify-items: center;
-    flex-direction: column;
-    justify-content: flex-end;
-    flex-wrap: nowrap;
-    align-items: center;
-    margin-bottom: 1rem;
+  .main {
+    padding: 5rem;
   }
   .main h1, .main h2, .main h3 {
     font-family: "Thasadith", sans-serif;
-    font-size: 2.5rem;
+    font-size: 4rem;
     font-weight: lighter;
     color: darkgray;
     text-align: center;
@@ -307,46 +278,39 @@ p {
   }
   .main h2, .main h3 {
     font-family: "Thasadith", sans-serif;
-    font-size: 1rem;
+    font-size: 1.5rem;
     font-weight: lighter;
     color: darkgray;
     text-align: center;
   }
   .main h3 {
     font-family: "Trispace", sans-serif;
-    font-size: 1rem;
+    font-size: 1.5rem;
     font-weight: lighter;
     color: darkgray;
     text-align: center;
     margin-bottom: 2rem;
   }
-  .main h4, .main h5, .main p {
+  .main h4, .main h5 {
     font-family: "Trispace", sans-serif;
-    font-size: 0.75rem;
+    font-size: 1rem;
     font-weight: lighter;
     color: black;
   }
   .main h5 {
     font-family: "Trispace", sans-serif;
-    font-size: 0.75rem;
+    font-size: 1rem;
     font-weight: lighter;
     color: black;
-  }
-  .main p {
-    background-color: darkgray;
-    color: black;
-    font-weight: bolder;
-    font-size: 0.75rem;
   }
   /*productos outlet y fragancias*/
   .productos {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: repeat 6, 1fr;
-    grid-template-areas: "p1 . p2" ". p3 ." "p4 . p5" ". p6 . " "p7 . p8" ". p9 . ";
-    width: 100%;
-    height: 100%;
-    gap: 0.5rem;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: repeat 5, 1fr;
+    grid-template-areas: "p1 p2" "p3 p4" "p5 p6" "p7 p8" ". p9 .";
+    grid-column-gap: 2rem;
+    grid-row-gap: 9rem;
     justify-items: center;
     justify-content: center;
   }
@@ -355,25 +319,25 @@ p {
   }
   /*whatsapp*/
   .whatsapp {
-    right: 0.25rem;
-    bottom: 14rem;
+    right: 1rem;
+    bottom: 12rem;
   }
   footer {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
   }
 }
 /*break point 2*/
 @media (min-width: 1024px) {
-  grilla gral .grillaGeneral {
+  /*grilla gral*/
+  .grillaGeneral {
     grid-template-columns: 1fr auto 1fr;
     grid-template-rows: repeat 3, 1fr;
     grid-template-areas: "nav nav nav" "main main main" "footer footer footer";
   }
-  /*general*/
+  /**general*/
   /*barra navegacion*/
   .nav {
     grid-area: nav;
@@ -405,7 +369,7 @@ p {
   }
   .main h1, .main h2, .main h3 {
     font-family: "Thasadith", sans-serif;
-    font-size: 2.5rem;
+    font-size: 3rem;
     font-weight: lighter;
     color: darkgray;
     text-align: center;
@@ -413,60 +377,59 @@ p {
   }
   .main h2, .main h3 {
     font-family: "Thasadith", sans-serif;
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: lighter;
     color: darkgray;
     text-align: center;
   }
   .main h3 {
     font-family: "Trispace", sans-serif;
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: lighter;
     color: darkgray;
     text-align: center;
     margin-bottom: 2rem;
   }
-  .main h4, .main h5, .main p {
+  .main h4, .main h5 {
     font-family: "Trispace", sans-serif;
-    font-size: 1rem;
+    font-size: 1.5rem;
     font-weight: lighter;
     color: black;
   }
   .main h5 {
     font-family: "Trispace", sans-serif;
-    font-size: 1rem;
+    font-size: 1.5rem;
     font-weight: lighter;
     color: black;
-  }
-  .main p {
-    background-color: darkgray;
-    color: black;
-    font-weight: bolder;
-    font-size: 0.75rem;
   }
   /*productos, outlet y fragancias*/
   .productos {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: repeat 5, auto;
-    grid-template-areas: "p1 . p2" "p3 . p4" "p5 . p6" "p7 . p8" ". p9 .";
-    gap: 2rem;
-    justify-items: center;
-    justify-content: center;
+    grid-template-rows: repeat 3, 1fr;
+    grid-template-areas: "p1 p2 p3" "p4 p5 p6" "p7 p8 p9";
+    grid-column-gap: 10rem;
+    grid-row-gap: 12rem;
+    justify-items: start;
+    justify-content: end;
+    align-content: center;
   }
   .p1 .p2 .p3 .p4 .p5 .p6 .p7 .p8 .p9 {
     grid-area: p1 p2 p3 p4 p5 p6 p7 p8 p9;
   }
-  productos .flexProductos {
-    display: flex;
-    align-content: space-around;
-    justify-items: center;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-start;
-    flex-wrap: wrap;
-  }
-  sign in .contacto {
+  /*
+      productos
+      .flexProductos {
+          display: flex;
+          align-content: space-around;
+          justify-items: center;
+          flex-direction: column;
+          justify-content: space-between;
+          align-items: flex-start;
+          flex-wrap: wrap;
+      }*/
+  /*sign in*/
+  .contacto {
     padding: 5rem;
     border: 0.1rem solid black;
     font-size: 1.5rem;

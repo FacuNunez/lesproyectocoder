@@ -73,14 +73,15 @@
     /*productos outlet y fragancias*/
     .productos {
         display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: repeat (4, 1fr);
-        grid-template-areas: "p1 p2"
-            "p3 p4"
-            "p5 p6"
-            "p7 p8"
-            "p9";
-        gap: 2rem;
+        grid-template-columns: 1fr auto;
+        grid-template-rows: repeat (5, 1fr);
+        grid-template-areas: "p1 p2" 
+        "p3 p4"
+        "p5 p6"
+        "p7 p8" 
+        ". p9 .";
+        grid-column-gap: 2rem;
+        grid-row-gap: 9rem;
         justify-items: center;
         justify-content: center;
     }
@@ -185,22 +186,25 @@
 
     /*productos, outlet y fragancias*/
     .productos {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: repeat (4, 1fr);
-        grid-template-areas: "p1 p2 p3"
-            "p4 p5 p6"
-            "p7 p8 p9";
-        gap: 2rem;
-        justify-items: center;
-        justify-content: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat (3, 1fr);
+    grid-template-areas:
+        "p1 p2 p3"
+        "p4 p5 p6"
+        "p7 p8 p9";
+    grid-column-gap: 10rem;
+    grid-row-gap: 12rem;
+    justify-items: start;
+    justify-content: end;
+    align-content: center;
     }
 
     .p1 .p2 .p3 .p4 .p5 .p6 .p7 .p8 .p9 {
         grid-area: p1 p2 p3 p4 p5 p6 p7 p8 p9;
     }
-
-    /**productos*/
+/*
+    productos
     .flexProductos {
         display: flex;
         align-content: space-around;
@@ -209,7 +213,7 @@
         justify-content: space-between;
         align-items: flex-start;
         flex-wrap: wrap;
-    }
+    }*/
 
     /*sign in*/
     .contacto {
