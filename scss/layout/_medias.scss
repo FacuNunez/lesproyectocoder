@@ -90,7 +90,6 @@
         grid-area: p1 p2 p3 p4 p5 p6 p7 p8 p9
     }
 
-
     /*whatsapp*/
     .whatsapp {
         right: 1rem;
@@ -146,7 +145,7 @@
         @include size (2rem);
     }
     .main{
-        padding: 5rem;
+        padding: 8rem;
     }
     .main h1{
         font-family:$font-principal;
@@ -203,18 +202,15 @@
     .p1 .p2 .p3 .p4 .p5 .p6 .p7 .p8 .p9 {
         grid-area: p1 p2 p3 p4 p5 p6 p7 p8 p9;
     }
-/*
-    productos
-    .flexProductos {
-        display: flex;
-        align-content: space-around;
-        justify-items: center;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: flex-start;
-        flex-wrap: wrap;
-    }*/
 
+    .fragancia{
+        display: flex;
+        align-items: flex-end;
+        flex-direction: row;
+        gap: 4rem;
+        justify-content: space-around;
+    }
+    
     /*sign in*/
     .contacto {
         @include medidas(5rem);

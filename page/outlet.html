@@ -20,31 +20,58 @@
             <div class="container-fluid">
                 <a class="navbar-brand" href="../index.html"> <img src="../img/leslogo.jpg" class="w-100"
                         alt="logo"></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                <button class="navbar-toggler dark" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+                    <label for="check" class="bar">
+                        <input id="check" type="checkbox">
+                        <span class="top"></span>
+                        <span class="middle"></span>
+                        <span class="bottom"></span>
+                    </label>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="./productos.html">Productos</a>
+                            <a class="nav-link active" aria-current="page" href="productos.html">Productos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" href="./fragancias.html">Fragancias</a>
+                            <a class="nav-link active" href="fragancias.html">Fragancias</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link active" href="outlet.html">Outlet</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" href="https://lesbuenosaires.empretienda.com.ar/"
-                                target="_blank">Tienda on line</a>
-                        </li>
                     </ul>
-                    <form class="d-flex">
-                        <input class="form-control me-2" type="search" aria-label="buscar">
-                        <button class="btn btn-outline-success" type="submit">Buscar</button>
-                    </form>
+                    <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                        data-bs-whatever="@fat">Ingresar</button>
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <form>
+                                        <div class="mb-2">
+                                            <label for="recipient-name" class="col-form-label">Email</label>
+                                            <input type="text" class="form-control" id="recipient-name">
+                                        </div>
+                                        <div class="mb-2">
+                                            <label for="recipient-name" class="col-form-label">Contraseña</label>
+                                            <input type="text" class="form-control" id="recipient-name">
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Log
+                                        out</button>
+                                    <button type="button" class="btn btn-secondary">Log in</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </nav>
@@ -58,30 +85,50 @@
                 alt="whatsapp" /></a>
         <!--productos-->
         <section class="productos">
-            <div class="flexProductos p1">
-                <picture>
-                    <source media="(min-width:480px )" srcset="">
+            <div class="card" style="width: 13rem;">
+                <picture class="card-img-top">
+                    <source media="(min-width:480px )" srcset="../img/dulce 480.jpeg">
                     <source media="(min-width:1024px )" srcset="../img/ofertas 1024.jpeg">
                     <img class="imgProduct" src="../img/ofertas.jpeg" alt="short blanco">
                 </picture>
-                <h4>Short Dulce</h4>
-                <h5>$1950</h5>
-                <br>
-                <a href="https://lesbuenosaires.empretienda.com.ar/shorts/short-dulce" target="blank"><button
-                        type="button" class="btn btn-secondary btn-sm">Comprar</button></a>
+                <div class="card-body">
+                    <h4 class="card-title">Short Dulce</h4>
+                    <h5 class="card-title">$1950</h5>
+                    <p class="card-text">Short rustico con elastico en cintura y bolados</p>
+                    <a href="https://lesbuenosaires.empretienda.com.ar/shorts/short-dulce" target="_blank"
+                        class="btn btn-primary">Ir a tienda</a>
+                </div>
             </div>
-            <div class="flexProductos p2">
-                <picture>
+            <div class="card" style="width: 13rem;">
+                <picture class="card-img-top">
+                    <source media="(min-width:480px )" srcset="../img/top bote (480).jpeg">
+                    <source media="(min-width:1024px )" srcset="../img/top bote (1024).jpeg">
+                    <img class="imgProduct" src="../img/top bote (1).jpeg" alt="top bote">
+                </picture>
+                <div class="card-body">
+                    <h4 class="card-title">Top Bote</h4>
+                    <h5 class="card-title">$2500</h5>
+                    <p class="card-text">Top de morley, escote bote
+                        Tale unico</p>
+                    <a href="https://lesbuenosaires.empretienda.com.ar/remeras/top-bote" target="_blank"
+                        class="btn btn-primary">Ir a tienda</a>
+                </div>
+            </div>
+            <div class="card" style="width: 13rem;">
+                <picture class="card-img-top">
                     <source media="(min-width:480px )" srcset="../img/IMG_9128 480.jpg">
                     <source media="(min-width:1024px )" srcset="../img/IMG_9128 1024.jpg">
                     <img class="imgProduct" src="../img/IMG_9128.jpg" alt="remera rolling stone">
                 </picture>
-                <h4>Remera Rolling</h4>
-                <h5>$3000</h5>
-                <br>
-                <a href="https://lesbuenosaires.empretienda.com.ar/remeras/remera-rolling" target="blank"><button
-                        type="button" class="btn btn-secondary btn-sm">Comprar</button></a>
+                <div class="card-body">
+                    <h4 class="card-title">Remera Rolling</h4>
+                    <h5 class="card-title">$3000</h5>
+                    <p class="card-text">Remera con estampa, rolling stones</p>
+                    <a href="https://lesbuenosaires.empretienda.com.ar/remeras/remera-rolling" target="_blank"
+                        class="btn btn-primary">Ir a tienda</a>
+                </div>
             </div>
+        <!--
             <div class="flexProductos p3">
                 <picture>
                     <source media="(min-width:480px )" srcset="../img/top bote (480).jpeg">
@@ -91,37 +138,42 @@
                 <h4>Top Bote</h4>
                 <h5>$2500</h5>
                 <br>
-                <a href="https://lesbuenosaires.empretienda.com.ar/remeras/top-bote" target="blank"><button
+                <a href="" target="blank"><button
                         type="button" class="btn btn-secondary btn-sm">Comprar</button></a>
-            </div>
+            </div>-->
         </section>
     </main>
     <!--footer para los 5 html-->
     <footer>
         <div>
-            <!--link e icono de facebook-->
             <h4 class="sociales">Redes Sociales</h4>
+            <!--link e icono de facebook-->
             <a href="https://www.facebook.com/Les-Buenos-Aires-108295491080570/" target="blank"><img class="redes"
                     src="../img/icons8-facebook-50.png" alt="facebook"></a>
             <!--link e icono de instagram-->
             <a href="https://www.instagram.com/les.bsas/" target="blank"><img class="redes"
                     src="../img/icons8-instagram-old-50.png" alt="instagram" /></a>
         </div>
-        <a class="btn btn-dark" href="./signIn.html" role="button">Sign in</a>
-        <!--iconos de medios de pago-->
+        <a class="btn btn-dark" href="./page/signIn.html" role="button">Registrate</a>
+
+        <!--iconos de formas de pago-->
         <div>
             <h4 class="pagos">Medios de Pago</h4>
             <a href="https://www.mercadopago.com.ar/" target="blank"><img src="../img/icons8-visa-50.png"
-                    alt="medios de pagos" /></a>
+                    alt="medios de pago" /></a>
             <a href="https://www.mercadopago.com.ar/" target="blank"><img src="../img/icons8-american-express-50.png"
-                    alt="medios de pagos" /></a>
+                    alt="medios de pago" /></a>
             <a href="https://www.mercadopago.com.ar/" target="blank"><img src="../img/icons8-mastercard-50.png"
-                    alt="medios de pagos" /></a>
+                    alt="medios de pago" /></a>
             <a href="https://www.mercadopago.com.ar/" target="blank"><img src="../img/icons8-bank-cards-50.png"
-                    alt="medios de pagos" /></a>
+                    alt="medios de pago" /></a>
             <a href="https://www.mercadopago.com.ar/" target="blank"><img src="../img/icons8-money-50.png"
-                    alt="medios de pagos" /></a>
+                    alt="medios de pago" /></a>
         </div>
+        <p>
+            © Copyright - 2022 , TODOS LOS DERECHOS RESERVADOS. Las fotos contenidas en este site, el logotipo y las
+            marcas son propiedad de Les Buenos Aires y/o de sus respectivos titulares. Está prohibida la reproducción
+            total o parcial, sin la expresa autorización de la administradora de la tienda virtual.</p>
         <!--pie de navegacion-->
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"

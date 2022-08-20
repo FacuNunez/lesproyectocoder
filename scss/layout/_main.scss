@@ -7,7 +7,7 @@ main {
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
-    @include medidas (5rem);
+    @include medidas (8rem);
     display: flex;
     justify-content: space-around;
     flex-direction: column;
@@ -72,7 +72,7 @@ h3{
 }   
 
 .main h1{
-    font-family:$font-principal;
+    font-family:$font-tercera;
     @include size (2rem);
     font-weight: lighter;
     color: $color-precio;
@@ -85,39 +85,55 @@ h3{
 }    
     
 .main h3{
-    font-family:$font-secundaria;
+    @extend h1;
     @include size (1.5rem);
     font-weight: lighter;
     color: $color-precio;
     text-align: center;
     margin-bottom: 2rem;
 }
-.main h4{
-    font-family:$font-secundaria;
+
+.card{
+    background-color: $color-letras;
+}
+.card-img-top{
+    margin-left: 1.80rem;
+    margin-top: 1rem;
+}
+
+.card-body {
+    font-family:$font-tercera;
     @include size (1rem);
     font-weight: lighter;
-    color:$color-letras;
+    color: $color-precio;
 }
-.main h5{
+
+.card-body h5{
     @extend h4;
+    color:$color-precio;
+    
 }    
-.productos {
-    display: grid;
-    grid-template-columns: 1fr ;
-    grid-template-rows: repeat (9, 1fr);
-    grid-template-areas: "p1"
-        "p2"
-        "p3"
-        "p4"
-        "p5"
-        "p6"
-        "p7"
-        "p8"
-        "p9";
-    gap: 8rem;
-    justify-items: center;
-    justify-content: center;
+
+.card-text{
+    background-color: $color-letras;
+    color: $color-back;
+    font-size: 0.8rem;
+    
 }
+.productos {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 4rem;
+}
+.fragancia{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+
 .contacto {
     background-color:$color-precio;
     color:$color-letras;
