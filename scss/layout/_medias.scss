@@ -108,14 +108,7 @@
         align-items: center;
         justify-content: flex-start;
     }
-    
 
-    footer{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-    }
     /*sign in*/
     .main .contacto{
         display: flex;
@@ -125,6 +118,18 @@
         align-content: center;
         align-items: stretch;
     }
+    
+    footer{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .footer{
+        background-image: linear-gradient(to bottom, white, darkgray);
+    }
+    
 }
 /*break point 2*/
 @media(min-width:1024px) {
@@ -255,6 +260,10 @@
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
+    }
+
+    .footer{
+        background-image: linear-gradient(to bottom, white, darkgray);
     }
 }
 
