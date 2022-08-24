@@ -5,16 +5,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="logIn, signIn, ingresar, datos">
-    <meta name="description" content="se parte de Les, signIn">
-    <title>SignIn</title>
+    <meta name="keywords" content="comienzo, historia, nosotros, sobre, empezar">
+    <meta name="description" content="Nuestra historia, como empezamos y quienes somos">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="../estilos/style.css">
+    <title>Nosotros</title>
 </head>
 
 <body>
-    <!--header gral para todos los html-->
     <header class="grillaGeneral">
         <nav class="nav navbar navbar-expand-lg navbar-light">
             <div class="container-fluid">
@@ -47,7 +46,7 @@
                             <a class="nav-link active" href="outlet.html">Outlet</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" href="nosotros.html">Nosotros</a>
+                            <a class="nav-link active" href="./nosotros.html">Nosotros</a>
                         </li>
                     </ul>
                     <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal"
@@ -84,72 +83,29 @@
             </div>
         </nav>
     </header>
-    <main class="main-contacto">
-        <!--formularios de signin-->
-        <form class="contacto">
-            <form class="row g-3">
-                <div class="col-md-12">
-                    <label for="inputEmail4" class="form-label">Email</label>
-                    <input type="email" class="form-control" id="inputEmail4">
-                </div>
-                <div class="col-md-12">
-                    <label for="inputNombreApellido4" class="form-label">Nombre y apellido</label>
-                    <input type="password" class="form-control" id="inputNombreApellido4">
-                </div>
-                <div class="col-12">
-                    <label for="inputAddress" class="form-label">Direccion</label>
-                    <input type="text" class="form-control" id="inputAddress">
-                </div>
-                <div class="col-md-6">
-                    <label for="inputCity" class="form-label">Ciudad</label>
-                    <input type="text" class="form-control" id="inputCity">
-                </div>
-                <div class="col-md-6">
-                    <label for="inputState" class="form-label">Provincia</label>
-                    <select id="inputState" class="form-select">
-                        <option selected>Elegir</option>
-                        <option>Buenos Aires</option>
-                        <option>Entre Rios</option>
-                        <option>Cordoba</option>
-                        <option>Santa Fe</option>
-                    </select>
-                </div>
-                <div class="col-md-12">
-                    <label for="inputZip" class="form-label">Codigo Postal</label>
-                    <input type="text" class="form-control" id="inputZip">
-                </div>
-                <div class="col-12">
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="gridCheck">
-                        <label class="form-check-label" for="gridCheck">
-                            Check me out
-                        </label>
-                    </div>
-                </div>
-                <div class="col-12">
-                    <button type="submit" class="btn btn-dark">Sign in</button>
-                </div>
-            </form>
-        </form>
+    <main class="nosotros">
+            <h1>Nuestra historia</h1>
+            <p></p>
+
     </main>
     <!--footer gral para todos los html-->
     <footer>
         <div>
-            <!--link e icono de facebook-->
             <h4 class="sociales">Redes Sociales</h4>
+            <!--link e icono de facebook-->
             <a href="https://www.facebook.com/Les-Buenos-Aires-108295491080570/" target="blank"><img class="redes"
                     src="../img/icons8-facebook-50.png" alt="facebook"></a>
             <!--link e icono de instagram-->
             <a href="https://www.instagram.com/les.bsas/" target="blank"><img class="redes"
                     src="../img/icons8-instagram-old-50.png" alt="instagram" /></a>
-            <!--link e icono de whatsapp-->
+            <!--icono de whatsapp-->
             <a href="https://web.whatsapp.com/" target="blank"><img class="whatsapp" src="../img/icons8-whatsapp-50.png"
                     alt="whatsapp" /></a>
         </div>
-        <!--boton linkeado a signIn-->
-        <a class="btn btn-dark" href="signIn.html" role="button">Registrate</a>
+        <a class="btn btn-dark" href="../page/signIn.html" role="button">Registrate</a>
+
+        <!--iconos de formas de pago-->
         <div>
-            <!--iconos de forma de pago-->
             <h4 class="pagos">Medios de Pago</h4>
             <a href="https://www.mercadopago.com.ar/" target="blank"><img src="../img/icons8-visa-50.png"
                     alt="medios de pago" /></a>
@@ -164,13 +120,13 @@
         </div>
         <p>
             © Copyright - 2022 , TODOS LOS DERECHOS RESERVADOS. Las fotos contenidas en este site, el logotipo y las
-            marcas son propiedad de Les Buenos Aires y/o de sus respectivos titulares. Está prohibida la
-            reproducción
+            marcas son propiedad de Les Buenos Aires y/o de sus respectivos titulares. Está prohibida la reproducción
             total o parcial, sin la expresa autorización de la administradora de la tienda virtual.</p>
         <!--pie de navegacion-->
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
     </script>
+</body>
 
 </html>

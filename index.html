@@ -18,7 +18,13 @@
     <header class="grillaGeneral">
         <nav class="nav navbar navbar-expand-lg navbar-light">
             <div class="container-fluid">
-                <a class="navbar-brand" href="index.html"> <img src="./img/leslogo.jpg" class="w-100" alt="logo"></a>
+                <a class="navbar-brand" href="index.html">
+                    <picture class="w-100" alt="logo">
+                        <source media="(min-width:480px )" srcset="./img/les logo (480).jpg">
+                        <source media="(min-width:1024px )" srcset="./img/leslogo1024(2).jpg">
+                        <img src="./img/leslogo.jpg" alt="logo">
+                    </picture>
+                </a>
                 <button class="navbar-toggler dark" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
@@ -39,6 +45,9 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link active" href="page/outlet.html">Outlet</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="page/nosotros.html">Nosotros</a>
                         </li>
                     </ul>
                     <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal"
@@ -78,11 +87,6 @@
     <main>
         <h1>+AMOR</h1>
         <h2>Autumn/Winter</h2>
-        <!--simbolo de whatsapp-->
-        <div>
-            <a href="https://web.whatsapp.com/" target="blank"><img class="whatsapp" src="img/icons8-whatsapp-50.png"
-                    alt="whatsapp" /></a>
-        </div>
     </main>
     <!--footer general para todos los html-->
     <footer class="footer">
@@ -94,6 +98,9 @@
             <!--link e icono de instagram-->
             <a href="https://www.instagram.com/les.bsas/" target="blank"><img class="redes"
                     src="img/icons8-instagram-old-50.png" alt="instagram" /></a>
+            <!--link e icono de whatsapp-->        
+            <a href="https://web.whatsapp.com/" target="blank"><img class="whatsapp" src="img/icons8-whatsapp-50.png"
+                        alt="whatsapp" /></a>
         </div>
         <a class="btn btn-dark" href="./page/signIn.html" role="button">Registrate</a>
 

@@ -18,8 +18,13 @@
     <header class="grillaGeneral">
         <nav class="nav navbar navbar-expand-lg navbar-light">
             <div class="container-fluid">
-                <a class="navbar-brand" href="../index.html"> <img src="../img/leslogo.jpg" class="w-100"
-                        alt="logo"></a>
+                <a class="navbar-brand" href="../index.html">
+                    <picture class="w-100" alt="logo">
+                        <source media="(min-width:480px )" srcset="../img/les logo (480).jpg">
+                        <source media="(min-width:1024px )" srcset="../img/leslogo1024(2).jpg">
+                        <img src="../img/leslogo.jpg" alt="logo">
+                    </picture>
+                </a>
                 <button class="navbar-toggler dark" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
@@ -40,6 +45,9 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link active" href="outlet.html">Outlet</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="nosotros.html">Nosotros</a>
                         </li>
                     </ul>
                     <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal"
@@ -67,7 +75,7 @@
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Log
                                         out</button>
-                                    <button type="button" class="btn btn-secondary">Log in</button>
+                                    <button type="button" class="btn btn-success">Log in</button>
                                 </div>
                             </div>
                         </div>
@@ -78,47 +86,41 @@
     </header>
     <main class="main">
         <h1>Fragancia</h1>
-        <h2>otoño/invierno</h2>
-        <h3>2022</h3>
-        <!--icono de whatsapp-->
-        <div>
-            <a href="https://web.whatsapp.com/" target="blank"><img class="whatsapp" src="../img/icons8-whatsapp-50.png"
-                    alt="whatsapp" /></a>
-        </div>
+        <h2>Para ropa y ambientes, un aroma perfecto</h2>
         <!--productos-->
         <section class="fragancia">
-                <div class="card f1" style="width: 18rem;">
+            <div class="cardSombra">
+                <div class="card f1" style="width: 15rem;">
                     <picture class="card-img-top">
                         <source media="(min-width:480px )" srcset="../img/home 480.jpeg">
                         <source media="(min-width:1024px )" srcset="../img/home 1024.jpeg">
                         <img class="imgProduct" src="../img/home.jpeg" alt="Fragancias">
                     </picture>
                     <div class="card-body">
-                        <h4 class="card-title">Home Spray x 250ml</h4>
-                        <h5 class="card-title">$750</h5>
-                        <p class="card-text">Home Spray N 1. Para ropa, ambientes. Un aroma perfecto. Botella Plastica
-                            color
-                            ambar, gatillo spray por 250ml</p>
+                        <h3 class="card-title">Home Spray x 250ml</h3>
+                        <h4 class="card-title">$750</h4>
+                        <p class="card-text">Home Spray N 1. Botella plastica x 250ml</p>
                         <a href="https://lesbuenosaires.empretienda.com.ar/home/home-spray-x-250-ml" target="_blank"
-                            class="btn btn-primary">Ir a tienda</a>
+                            class="btn btn-dark">Ir a tienda</a>
                     </div>
                 </div>
-                <div class="card f2" style="width: 18rem;">
+            </div>
+            <div class="cardSombra">
+                <div class="card f2" style="width: 15rem;">
                     <picture class="card-img-top">
                         <source media="(min-width:480px )" srcset="../img/fragancia(2) (480).jpeg">
                         <source media="(min-width:1024px )" srcset="../img/fragancia(2) (1024).jpeg">
                         <img class="imgProduct" src="../img/fragancia(2).jpeg" alt="Fragancias">
                     </picture>
                     <div class="card-body">
-                        <h4 class="card-title">Home Spray x 500ml</h4>
-                        <h5 class="card-title">$1200</h5>
-                        <p class="card-text">Home spray N•1. Para ropa, ambientes, un aroma perfecto, botella de vidrio
-                            color
-                            ámbar, gatillo spray x 500 ml.</p>
+                        <h3 class="card-title">Home Spray x 500ml</h3>
+                        <h4 class="card-title">$1200</h4>
+                        <p class="card-text">Home spray N•1. Botella de vidrio x 500 ml.</p>
                         <a href="https://lesbuenosaires.empretienda.com.ar/home/home-spray" target="_blank"
-                            class="btn btn-primary">Ir a tienda</a>
+                            class="btn btn-dark">Ir a tienda</a>
                     </div>
                 </div>
+            </div>
         </section>
     </main>
     <footer>
@@ -130,8 +132,11 @@
             <!--link e icono de instagram-->
             <a href="https://www.instagram.com/les.bsas/" target="blank"><img class="redes"
                     src="../img/icons8-instagram-old-50.png" alt="instagram" /></a>
+            <!--icono de whatsapp-->
+            <a href="https://web.whatsapp.com/" target="blank"><img class="whatsapp" src="../img/icons8-whatsapp-50.png"
+                    alt="whatsapp" /></a>
         </div>
-        <a class="btn btn-dark" href="./page/signIn.html" role="button">Registrate</a>
+        <a class="btn btn-dark" href="../page/signIn.html" role="button">Registrate</a>
 
         <!--iconos de formas de pago-->
         <div>

@@ -16,133 +16,117 @@ main {
     align-items: center;
     
 }
-.cardSombra {
-    width: 190px;
-    height: 254px;
-    border-radius: 30px;
-    background:#ddd9d9;
-    box-shadow: 15px 15px 30px #302e2e,
-                -15px -15px 30px #ffffff;
-}
 
 h1{
     font-family:$font-principal;
-    @include size (4rem);
+    @include size (5rem);
     color:$color-back;
 }
+
 h2 {
     font-family: $font-secundaria;
     @include size (2rem);
     font-weight: bolder;
-    color:$color-letras;
-}    
-h3{
-    @extend h2;
-    @include size (1.5rem);
-}
-        
-
-
-.whatsapp{
-    border: none;
-    position: sticky;
-    bottom: 8rem;
-    position: fixed;
-    right: 1rem;
-    &:hover {
-        animation: whats 2s;
-        @keyframes whats{
-            10%{ transform: rotate(360deg)
-            }
-            20%{ transform: translateY(2rem);
-            }
-        }
-    }    
-}
+    color:$color-back;
+} 
 
 .main{
+    background-image: linear-gradient(to top, $color-precio, $color-back);
+}
+
+.main .productos{
     width: 100%;
     height: 100%;
-    background-image:none;
     display: flex;
+    align-items: center;
     flex-direction: column;
-    align-content: center;
-    justify-content: flex-start;
-    align-items: stretch;
-}   
-
-.main h1{
-    font-family:$font-tercera;
-    @include size (2rem);
-    font-weight: lighter;
-    color: $color-precio;
-    text-align: center;
-    margin-bottom: 0rem;       
-}
-.main h2{
-    @extend h1;
-    @include size (1.5rem);
-}    
-    
-.main h3{
-    @extend h1;
-    @include size (1.5rem);
-    font-weight: lighter;
-    color: $color-precio;
-    text-align: center;
-    margin-bottom: 2rem;
-}
-
-.card{
-    background-color: $color-letras;
-}
-.card-img-top{
-    margin-left: 1.80rem;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    gap: 2rem;
     margin-top: 1rem;
 }
 
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color:$color-back;
+    background-clip: border-box;
+    border: 0.5px solid $color-letras;
+    border-radius: 1rem;
+    align-items: center;
+}
 .card-body {
-    font-family:$font-tercera;
-    @include size (1rem);
-    font-weight: lighter;
-    color: $color-precio;
+    flex: 0 1 auto;
+    padding: 0rem 3rem;
+    margin-bottom: 0.5rem;
+}
+.card-img, .card-img-bottom, .card-img-top {
+    width: 100%;
+    margin-left: 3.5rem;
+    margin-top: 1rem;
 }
 
-.card-body h5{
-    @extend h4;
-    color:$color-precio;
-    
-}    
-
-.card-text{
-    background-color: $color-letras;
-    color: $color-back;
-    font-size: 0.8rem;
-    
+.card-img, .card-img-bottom, .card-img-top-prod {
+    width: 100%;
+    margin-left: 4.5rem;
+    margin-top: 1rem;
 }
-.productos {
+
+.card-img, .card-img-bottom, .card-img-top-prod-2{
+    width: 100%;
+    margin-left: 5.5rem;
+    margin-top: 1rem;
+}
+
+.main p{
+    @include size (0.8rem);
+}
+
+.main .fragancia{
     display: flex;
-    align-items: center;
+    @include medidas (5rem);
+    gap: 10rem;
     flex-direction: column;
-    gap: 4rem;
-}
-.fragancia{
-    display: flex;
+    flex-wrap: nowrap;
     align-items: center;
-    flex-direction: column;
-    gap: 4rem;
+    justify-content: flex-start;
 }
 
-
-.contacto {
-    background-color:$color-precio;
+.main h1{
+    @include size (3rem);
     color:$color-letras;
-    font-family:$font-principal;
-    @include size (0.5rem);
-    display: flex;
-    justify-content:flex-start;
-    flex-direction: column;
-    align-content: space-around;
-    flex-wrap: wrap;
-    align-items: stretch;
+}
+
+.main h2{
+    @include size (0.8rem);
+    text-align: center;
+    color: $color-letras;
+}
+
+.main h3{
+    @include size (1.5rem);
+    text-align: center;
+}
+
+.main h4{
+    @include size (1rem);
+    text-align: center;
+}
+
+.cardSombra {
+    width: 240px;
+    height: 290px;
+    border-radius: 30px;
+    background: #e0e0e0;
+    box-shadow: 15px 15px 30px #bebebe, -15px -15px 30px #ffffff;
+}
+
+.main-contacto{
+    font-family: $font-secundaria;
+    @include size (1rem);
+    font-weight: bolder;
+    padding: 2rem ;
 }

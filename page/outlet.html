@@ -18,8 +18,13 @@
     <header class="grillaGeneral">
         <nav class="nav navbar navbar-expand-lg navbar-light">
             <div class="container-fluid">
-                <a class="navbar-brand" href="../index.html"> <img src="../img/leslogo.jpg" class="w-100"
-                        alt="logo"></a>
+                <a class="navbar-brand" href="../index.html">
+                    <picture class="w-100" alt="logo">
+                        <source media="(min-width:480px )" srcset="../img/les logo (480).jpg">
+                        <source media="(min-width:1024px )" srcset="../img/leslogo1024(2).jpg">
+                        <img src="../img/leslogo.jpg" alt="logo">
+                    </picture>
+                </a>
                 <button class="navbar-toggler dark" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
@@ -40,6 +45,9 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link active" href="outlet.html">Outlet</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="nosotros.html">Nosotros</a>
                         </li>
                     </ul>
                     <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal"
@@ -67,7 +75,7 @@
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Log
                                         out</button>
-                                    <button type="button" class="btn btn-secondary">Log in</button>
+                                    <button type="button" class="btn btn-success">Log in</button>
                                 </div>
                             </div>
                         </div>
@@ -77,70 +85,53 @@
         </nav>
     </header>
     <main class="main">
-        <h1>Remanentes</h1>
+        <h1>Outlet</h1>
         <h2>temporadas anteriores</h2>
-        <h3>LES</h3>
-        <!--simbolo de whatsapp-->
-        <a href="https://web.whatsapp.com/" target="blank"><img class="whatsapp" src="../img/icons8-whatsapp-50.png"
-                alt="whatsapp" /></a>
         <!--productos-->
         <section class="productos">
-            <div class="card" style="width: 13rem;">
+            <div class="card p1" style="width: 13rem;">
                 <picture class="card-img-top">
                     <source media="(min-width:480px )" srcset="../img/dulce 480.jpeg">
                     <source media="(min-width:1024px )" srcset="../img/ofertas 1024.jpeg">
                     <img class="imgProduct" src="../img/ofertas.jpeg" alt="short blanco">
                 </picture>
                 <div class="card-body">
-                    <h4 class="card-title">Short Dulce</h4>
-                    <h5 class="card-title">$1950</h5>
+                    <h3 class="card-title">Short Dulce</h3>
+                    <h4 class="card-title">$1950</h4>
                     <p class="card-text">Short rustico con elastico en cintura y bolados</p>
                     <a href="https://lesbuenosaires.empretienda.com.ar/shorts/short-dulce" target="_blank"
-                        class="btn btn-primary">Ir a tienda</a>
+                        class="btn btn-success">Ir a tienda</a>
                 </div>
             </div>
-            <div class="card" style="width: 13rem;">
+            <div class="card p2" style="width: 13rem;">
                 <picture class="card-img-top">
                     <source media="(min-width:480px )" srcset="../img/top bote (480).jpeg">
                     <source media="(min-width:1024px )" srcset="../img/top bote (1024).jpeg">
                     <img class="imgProduct" src="../img/top bote (1).jpeg" alt="top bote">
                 </picture>
                 <div class="card-body">
-                    <h4 class="card-title">Top Bote</h4>
-                    <h5 class="card-title">$2500</h5>
+                    <h3 class="card-title">Top Bote</h3>
+                    <h4 class="card-title">$2500</h4>
                     <p class="card-text">Top de morley, escote bote
                         Tale unico</p>
                     <a href="https://lesbuenosaires.empretienda.com.ar/remeras/top-bote" target="_blank"
-                        class="btn btn-primary">Ir a tienda</a>
+                        class="btn btn-success">Ir a tienda</a>
                 </div>
             </div>
-            <div class="card" style="width: 13rem;">
+            <div class="card p9" style="width: 13rem;">
                 <picture class="card-img-top">
                     <source media="(min-width:480px )" srcset="../img/IMG_9128 480.jpg">
                     <source media="(min-width:1024px )" srcset="../img/IMG_9128 1024.jpg">
                     <img class="imgProduct" src="../img/IMG_9128.jpg" alt="remera rolling stone">
                 </picture>
                 <div class="card-body">
-                    <h4 class="card-title">Remera Rolling</h4>
-                    <h5 class="card-title">$3000</h5>
+                    <h3 class="card-title">Remera Rolling</h3>
+                    <h4 class="card-title">$3000</h4>
                     <p class="card-text">Remera con estampa, rolling stones</p>
                     <a href="https://lesbuenosaires.empretienda.com.ar/remeras/remera-rolling" target="_blank"
-                        class="btn btn-primary">Ir a tienda</a>
+                        class="btn btn-success">Ir a tienda</a>
                 </div>
             </div>
-        <!--
-            <div class="flexProductos p3">
-                <picture>
-                    <source media="(min-width:480px )" srcset="../img/top bote (480).jpeg">
-                    <source media="(min-width:1024px )" srcset="../img/top bote (1024).jpeg">
-                    <img class="imgProduct" src="../img/top bote (1).jpeg" alt="top bote">
-                </picture>
-                <h4>Top Bote</h4>
-                <h5>$2500</h5>
-                <br>
-                <a href="" target="blank"><button
-                        type="button" class="btn btn-secondary btn-sm">Comprar</button></a>
-            </div>-->
         </section>
     </main>
     <!--footer para los 5 html-->
@@ -153,8 +144,11 @@
             <!--link e icono de instagram-->
             <a href="https://www.instagram.com/les.bsas/" target="blank"><img class="redes"
                     src="../img/icons8-instagram-old-50.png" alt="instagram" /></a>
+            <!--simbolo de whatsapp-->
+            <a href="https://web.whatsapp.com/" target="blank"><img class="whatsapp" src="../img/icons8-whatsapp-50.png"
+                    alt="whatsapp" /></a>
         </div>
-        <a class="btn btn-dark" href="./page/signIn.html" role="button">Registrate</a>
+        <a class="btn btn-dark" href="../page/signIn.html" role="button">Registrate</a>
 
         <!--iconos de formas de pago-->
         <div>

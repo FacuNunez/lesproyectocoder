@@ -18,6 +18,7 @@
         font-weight: bolder;
         @include size (2rem);
     }
+
     h1{
         font-family:$font-principal;
         @include size (4rem);
@@ -32,9 +33,11 @@
     h3{
         @include size (1rem);
     }
+
     .main{
         padding: 5rem;
     }
+
     .main h1{
         font-family:$font-principal;
         @include size (4rem);
@@ -43,6 +46,7 @@
         text-align: center;
         margin-bottom: 0rem;       
     }
+
     .main h2{
         font-family:$font-principal;
         @include size (1.5rem);
@@ -50,6 +54,7 @@
         color: $color-precio;
         text-align: center;
     }
+
     .main h3{
         font-family:$font-secundaria;
         @include size (1.5rem);
@@ -58,49 +63,67 @@
         text-align: center;
         margin-bottom: 2rem;
     }
+
     .main h4{
         font-family:$font-secundaria;
         @include size (1rem);
         font-weight: lighter;
         color:$color-letras;
     }
+
     .main h5{
         font-family:$font-secundaria;
         @include size (1rem);
         font-weight: lighter;
         color:$color-letras ;
     }
+
     /*productos outlet y fragancias*/
-    .productos {
+    .main .productos {
         display: grid;
-        grid-template-columns: 1fr auto;
+        grid-template-columns: 1fr 1fr;
         grid-template-rows: repeat (5, 1fr);
         grid-template-areas: "p1 p2" 
         "p3 p4"
         "p5 p6"
         "p7 p8" 
-        ". p9 .";
+        "p9";
         grid-column-gap: 2rem;
         grid-row-gap: 9rem;
         justify-items: center;
         justify-content: center;
+        align-items: stretch;
     }
 
     .p1 .p2 .p3 .p4 .p5 .p6 .p7 .p8 .p9{
         grid-area: p1 p2 p3 p4 p5 p6 p7 p8 p9
     }
 
-    /*whatsapp*/
-    .whatsapp {
-        right: 1rem;
-        bottom: 12rem;
+    .main .fragancia {
+        display: flex;
+        padding: 7rem;
+        gap: 13rem;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: flex-start;
     }
+    
 
     footer{
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         justify-content: space-between;
-        align-items: center
+        align-items: center;
+    }
+    /*sign in*/
+    .main .contacto{
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-content: center;
+        align-items: stretch;
     }
 }
 /*break point 2*/
@@ -130,7 +153,7 @@
     main {
         height: 100%;
         width: 100%;
-        padding: 10rem;
+        padding: 12rem;
     } 
     h1{
         font-family:$font-principal;
@@ -184,41 +207,54 @@
     }
 
     /*productos, outlet y fragancias*/
-    .productos {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: repeat (3, 1fr);
-    grid-template-areas:
-        "p1 p2 p3"
-        "p4 p5 p6"
-        "p7 p8 p9";
-    grid-column-gap: 10rem;
-    grid-row-gap: 12rem;
-    justify-items: start;
-    justify-content: end;
-    align-content: center;
+    .main .productos {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: repeat 3, 1fr;
+        grid-template-areas:
+            "p1 p2 p3"
+            "p4 p5 p6"
+            "p7 p8 p9";
+        grid-column-gap: 7rem;
+        grid-row-gap: 5rem;
+        justify-items: center;
+        justify-content: end;
+        align-content: center
     }
 
     .p1 .p2 .p3 .p4 .p5 .p6 .p7 .p8 .p9 {
         grid-area: p1 p2 p3 p4 p5 p6 p7 p8 p9;
     }
 
-    .fragancia{
+    .main .fragancia{
         display: flex;
         align-items: flex-end;
         flex-direction: row;
-        gap: 4rem;
+        gap: 25rem;
         justify-content: space-around;
     }
     
     /*sign in*/
-    .contacto {
+    .main .contacto {
         @include medidas(5rem);
         border: 0.10rem solid $color-letras;
         @include size (1.5rem);
         background-position: none;
         background-size: none;
         background-repeat: none;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-content: center;
+        align-items: stretch;
+    }
+
+    footer{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
     }
 }
 

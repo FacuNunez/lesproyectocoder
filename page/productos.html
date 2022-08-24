@@ -19,7 +19,13 @@
     <header class="grillaGeneral">
         <nav class="nav navbar navbar-expand-lg navbar-light">
             <div class="container-fluid">
-                <a class="navbar-brand" href="../index.html"> <img src="../img/leslogo.jpg" class="w-100" alt="logo"></a>
+                <a class="navbar-brand" href="../index.html">
+                    <picture class="w-100" alt="logo">
+                        <source media="(min-width:480px )" srcset="../img/les logo (480).jpg">
+                        <source media="(min-width:1024px )" srcset="../img/leslogo1024(2).jpg">
+                        <img src="../img/leslogo.jpg" alt="logo">
+                    </picture>
+                </a>
                 <button class="navbar-toggler dark" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
@@ -40,6 +46,9 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link active" href="outlet.html">Outlet</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="nosotros.html">Nosotros</a>
                         </li>
                     </ul>
                     <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal"
@@ -67,7 +76,7 @@
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Log
                                         out</button>
-                                    <button type="button" class="btn btn-secondary">Log in</button>
+                                    <button type="button" class="btn btn-success">Log in</button>
                                 </div>
                             </div>
                         </div>
@@ -79,158 +88,132 @@
     <main class="main">
         <h1>Coleccion</h1>
         <h2>otoño/invierno</h2>
-        <h3>2022</h3>
-        <!--icono de whatsapp-->
-        <a href="https://web.whatsapp.com/" target="blank"><img class="whatsapp" src="../img/icons8-whatsapp-50.png"
-                alt="whatsapp" /></a>
         <!--productos-->
         <section class="productos">
-            <div class="cardSombra">
-                <div class="card p1" style="width: 13rem;">
-                    <picture class="card-img-top">
-                        <source media="(min-width:480px )" srcset="../img/IMG_9115 480.jpg">
-                        <source media="(min-width:1024px )" srcset="../img/IMG_9115 1024.jpg">
-                        <img src="../img/IMG_9115.jpg" alt="remera vida">
-                    </picture>
-                    <div class="card-body">
-                        <h4 class="card-title">Remera Vida</h4>
-                        <h5 class="card-title">$3000</h5>
-                        <p class="card-text">Remera escote v, con estampa y mini strass negros</p>
-                        <a href="https://lesbuenosaires.empretienda.com.ar/remeras/remera-vida" target="_blank"
-                            class="btn btn-primary">Ir a tienda</a>
-                    </div>
+            <div class="card p1" style="width: 13rem;">
+                <picture class="card-img-top">
+                    <source media="(min-width:480px )" srcset="../img/IMG_9115 480.jpg">
+                    <source media="(min-width:1024px )" srcset="../img/IMG_9115 1024.jpg">
+                    <img src="../img/IMG_9115.jpg" alt="remera vida">
+                </picture>
+                <div class="card-body">
+                    <h3 class="card-title">Remera Vida</h3>
+                    <h4 class="card-title">$3000</h4>
+                    <p class="card-text">Remera escote v, con estampa y mini strass negros</p>
+                    <a href="https://lesbuenosaires.empretienda.com.ar/remeras/remera-vida" target="_blank"
+                        class="btn btn-success">Ir a tienda</a>
                 </div>
             </div>
-            <div class="cardSombra">
-                <div class="card p2" style="width: 13rem;">
-                    <picture class="card-img-top">
-                        <source media="(min-width:480px )" srcset="../img/camperafleco 480.jpeg">
-                        <source media="(min-width:1024px )" srcset="../img/camperafleco 1024.jpeg">
-                        <img src="../img/campera fleco 4600.jpeg" alt="campera fleco">
-                    </picture>
-                    <div class="card-body">
-                        <h4 class="card-title">Campera Fleco</h4>
-                        <h5 class="card-title">$6900</h5>
-                        <p class="card-text">Campera/camisa de gabardina elástica, con flecos en la pechera</p>
-                        <a href="https://lesbuenosaires.empretienda.com.ar/abrigos/campera-fleco" target="_blank"
-                            class="btn btn-primary">ir a tienda</a>
-                    </div>
+            <div class="card p2" style="width: 13rem;">
+                <picture class="card-img-top-prod">
+                    <source media="(min-width:480px )" srcset="../img/camperafleco 480.jpeg">
+                    <source media="(min-width:1024px )" srcset="../img/camperafleco 1024.jpeg">
+                    <img src="../img/campera fleco 4600.jpeg" alt="campera fleco">
+                </picture>
+                <div class="card-body">
+                    <h3 class="card-title">Campera Fleco</h3>
+                    <h4 class="card-title">$6900</h4>
+                    <p class="card-text">Campera/camisa de gabardina elástica, con flecos</p>
+                    <a href="https://lesbuenosaires.empretienda.com.ar/abrigos/campera-fleco" target="_blank"
+                        class="btn btn-success">ir a tienda</a>
                 </div>
             </div>
-            <div class="cardSombra">
-                <div class="card p3" style="width: 13rem;">
-                    <picture class="card-img-top">
-                        <source media="(min-width:480px )" srcset="../img/Sweater Lara (2).jpeg">
-                        <source media="(min-width:1024px )" srcset="../img/Sweater Lara ().jpeg">
-                        <img src="../img/Sweater Lara (1).jpeg" alt="maxi sweater lara">
-                    </picture>
-                    <div class="card-body">
-                        <h4 class="card-title">MaxiSweater Lara</h4>
-                        <h5 class="card-title">$5250</h5>
-                        <p class="card-text">Manga Oxford , con rayas , textura de lana frizz.</p>
-                        <a href="https://lesbuenosaires.empretienda.com.ar/buzos-y-sweaters/maxi-sweater-lara"
-                            target="_blank" class="btn btn-primary">ir a tinda</a>
-                    </div>
+            <div class="card p3" style="width: 13rem;">
+                <picture class="card-img-top">
+                    <source media="(min-width:480px )" srcset="../img/Sweater Lara (2).jpeg">
+                    <source media="(min-width:1024px )" srcset="../img/Sweater Lara ().jpeg">
+                    <img src="../img/Sweater Lara (1).jpeg" alt="sweater lara">
+                </picture>
+                <div class="card-body">
+                    <h3 class="card-title">Sweater Lara</h3>
+                    <h4 class="card-title">$5250</h4>
+                    <p class="card-text">Manga Oxford, con rayas, textura de lana frizz.</p>
+                    <a href="https://lesbuenosaires.empretienda.com.ar/buzos-y-sweaters/maxi-sweater-lara"
+                        target="_blank" class="btn btn-success">ir a tinda</a>
                 </div>
             </div>
-            <div class="cardSombra">
-                <div class="card p4" style="width: 13rem;">
-                    <picture class="card-img-top">
-                        <source media="(min-width:480px )" srcset="../img/IMG_9111 480.jpg">
-                        <source media="(min-width:1024px )" srcset="../img/IMG_9111 1024.jpg">
-                        <img src="../img/IMG_9111.jpg" alt="Remeron Animal">
-                    </picture>
-                    <div class="card-body">
-                        <h4 class="card-title">Remeron Animal</h4>
-                        <h5 class="card-title">$3000</h5>
-                        <p class="card-text">Remeron con estampa, negro gastado, talle unico</p>
-                        <a href="https://lesbuenosaires.empretienda.com.ar/remeras/remeron-animal" target="_blank"
-                            class="btn btn-primary">ir a tienda</a>
-                    </div>
+            <div class="card p4" style="width: 13rem;">
+                <picture class="card-img-top">
+                    <source media="(min-width:480px )" srcset="../img/IMG_9111 480.jpg">
+                    <source media="(min-width:1024px )" srcset="../img/IMG_9111 1024.jpg">
+                    <img src="../img/IMG_9111.jpg" alt="Remeron Animal">
+                </picture>
+                <div class="card-body">
+                    <h3 class="card-title">Remeron Animal</h3>
+                    <h4 class="card-title">$3000</h4>
+                    <p class="card-text">Remeron con estampa, negro gastado</p>
+                    <a href="https://lesbuenosaires.empretienda.com.ar/remeras/remeron-animal" target="_blank"
+                        class="btn btn-success">ir a tienda</a>
                 </div>
             </div>
-            <div class="cardSombra">
-                <div class="card p5" style="width: 13rem;">
-                    <picture class="card-img-top">
-                        <source media="(min-width:480px )" srcset="../img/babuchaengomada 480.jpeg">
-                        <source media="(min-width:1024px )" srcset="../img/babuchaengomada 1024.jpeg">
-                        <img src="../img/babuchaengomada.jpeg" alt="babucha engomada">
-                    </picture>
-                    <div class="card-body">
-                        <h4 class="card-title">Babucha engomada</h4>
-                        <h5 class="card-title">$6300</h5>
-                        <p class="card-text">Babucha engomada, con cintura elástica y cordón regulable.
-                            Bolsillos en los costados</p>
-                        <a href="https://lesbuenosaires.empretienda.com.ar/pantalones/babucha-engomada" target="_blank"
-                            class="btn btn-primary">ir a tienda</a>
-                    </div>
+            <div class="card p5" style="width: 13rem;">
+                <picture class="card-img-top-prod-2">
+                    <source media="(min-width:480px )" srcset="../img/babuchaengomada 480.jpeg">
+                    <source media="(min-width:1024px )" srcset="../img/babuchaengomada 1024.jpeg">
+                    <img src="../img/babuchaengomada.jpeg" alt="babucha engomada">
+                </picture>
+                <div class="card-body">
+                    <h3 class="card-title">Babucha</h3>
+                    <h4 class="card-title">$6300</h4>
+                    <p class="card-text">Babucha engomada, con cintura elástica y cordón. Bolsillos laterales</p>
+                    <a href="https://lesbuenosaires.empretienda.com.ar/pantalones/babucha-engomada" target="_blank"
+                        class="btn btn-success">ir a tienda</a>
                 </div>
             </div>
-            <div class="cardSombra">
-                <div class="card p6" style="width: 13rem;">
-                    <picture class="card-img-top">
-                        <source media="(min-width:480px )" srcset="../img/camperalucia 480.jpeg">
-                        <source media="(min-width:1024px )" srcset="../img/camperalucia 1024.jpeg">
-                        <img src="../img/camperalucia.jpeg" alt="campera lucia">
-                    </picture>
-                    <div class="card-body">
-                        <h4 class="card-title">Campera Lucia</h4>
-                        <h5 class="card-title">$11000</h5>
-                        <p class="card-text">Campera estilo camisaco de matelasse con broches de ajuste doble
-                            bolsillo</p>
-                        <a href="https://lesbuenosaires.empretienda.com.ar/abrigos/campera-lucia" target="_blank"
-                            class="btn btn-primary">Ir a tienda</a>
-                    </div>
+            <div class="card p6" style="width: 13rem;">
+                <picture class="card-img-top-prod-2">
+                    <source media="(min-width:480px )" srcset="../img/camperalucia 480.jpeg">
+                    <source media="(min-width:1024px )" srcset="../img/camperalucia 1024.jpeg">
+                    <img src="../img/camperalucia.jpeg" alt="campera lucia">
+                </picture>
+                <div class="card-body">
+                    <h3 class="card-title">Campera Lucia</h3>
+                    <h4 class="card-title">$11000</h4>
+                    <p class="card-text">Campera estilo camisaco de matelasse con broches de ajuste.</p>
+                    <a href="https://lesbuenosaires.empretienda.com.ar/abrigos/campera-lucia" target="_blank"
+                        class="btn btn-success">Ir a tienda</a>
                 </div>
             </div>
-            <div class="cardSombra">
-                <div class="card p7" style="width: 13rem;">
-                    <picture class="card-img-top">
-                        <source media="(min-width:480px )" srcset="../img/IMG_8626 480.jpg">
-                        <source media="(min-width:1024px )" srcset="../img/IMG_8626 1024.jpg">
-                        <img src="../img/IMG_8626.jpg" alt="cardigan rosa">
-                    </picture>
-                    <div class="card-body">
-                        <h4 class="card-title">Saco Lila</h4>
-                        <h5 class="card-title">$5300</h5>
-                        <p class="card-text">Saco con botones, oversize</p>
-                        <a href="https://lesbuenosaires.empretienda.com.ar/buzos-y-sweaters/saco-lila" target="_blank"
-                            class="btn btn-primary">Ir a tienda</a>
-                    </div>
+            <div class="card p7" style="width: 13rem;">
+                <picture class="card-img-top">
+                    <source media="(min-width:480px )" srcset="../img/IMG_8626 480.jpg">
+                    <source media="(min-width:1024px )" srcset="../img/IMG_8626 1024.jpg">
+                    <img src="../img/IMG_8626.jpg" alt="cardigan rosa">
+                </picture>
+                <div class="card-body">
+                    <h3 class="card-title">Saco Lila</h3>
+                    <h4 class="card-title">$5300</h4>
+                    <p class="card-text">Saco con botones, oversize</p>
+                    <a href="https://lesbuenosaires.empretienda.com.ar/buzos-y-sweaters/saco-lila" target="_blank"
+                        class="btn btn-success">Ir a tienda</a>
                 </div>
             </div>
-            <div class="cardSombra">
-                <div class="card p8" style="width: 13rem;">
-                    <picture class="card-img-top">
-                        <source media="(min-width:480px )" srcset="../img/IMG_9137 480.jpg">
-                        <source media="(min-width:1024px )" srcset="../img/IMG_9137 1024.jpg">
-                        <img src="../img/IMG_9137.jpg" alt="Sweater Vilma">
-                    </picture>
-                    <div class="card-body">
-                        <h4 class="card-title">Sweater Vilma</h4>
-                        <h5 class="card-title">$4500</h5>
-                        <p class="card-text">Sweater media polera , manga murciélago, de Lana acrílico súper grueso
-                            y
-                            abrigado.</p>
-                        <a href="https://lesbuenosaires.empretienda.com.ar/buzos-y-sweaters/sweater-vilma"
-                            target="_blank" class="btn btn-primary">Ir a tienda</a>
-                    </div>
+            <div class="card p8" style="width: 13rem;">
+                <picture class="card-img-top">
+                    <source media="(min-width:480px )" srcset="../img/IMG_9137 480.jpg">
+                    <source media="(min-width:1024px )" srcset="../img/IMG_9137 1024.jpg">
+                    <img src="../img/IMG_9137.jpg" alt="Sweater Vilma">
+                </picture>
+                <div class="card-body">
+                    <h3 class="card-title">Sweater Vilma</h3>
+                    <h4 class="card-title">$4500</h4>
+                    <p class="card-text">Sweater media polera, manga murciélago, Lana acrílico.</p>
+                    <a href="https://lesbuenosaires.empretienda.com.ar/buzos-y-sweaters/sweater-vilma" target="_blank"
+                        class="btn btn-success">Ir a tienda</a>
                 </div>
             </div>
-            <div class="cardSombra">
-                <div class="card p9" style="width: 13rem;">
-                    <picture class="card-img-top">
-                        <source media="(min-width:480px )" srcset="../img/IMG_9127 480.jpg">
-                        <source media="(min-width:1024px )" srcset="../img/IMG_9127 1024.jpg">
-                        <img src="../img/IMG_9127.jpg" alt="Buzo Rock">
-                    </picture>
-                    <div class="card-body">
-                        <h4 class="card-title">Buzo Rock</h4>
-                        <h5 class="card-title">$6700</h5>
-                        <p class="card-text">Buzo oversize con mini strass hasta la mitad de la pechera</p>
-                        <a href="https://lesbuenosaires.empretienda.com.ar/buzos-y-sweaters/buzo-rock" target="_blank"
-                            class="btn btn-primary">Ir a tienda</a>
-                    </div>
+            <div class="card p9" style="width: 13rem;">
+                <picture class="card-img-top">
+                    <source media="(min-width:480px )" srcset="../img/IMG_9127 480.jpg">
+                    <source media="(min-width:1024px )" srcset="../img/IMG_9127 1024.jpg">
+                    <img src="../img/IMG_9127.jpg" alt="Buzo Rock">
+                </picture>
+                <div class="card-body">
+                    <h3 class="card-title">Buzo Rock</h3>
+                    <h4 class="card-title">$6700</h4>
+                    <p class="card-text">Buzo oversize con mini strass</p>
+                    <a href="https://lesbuenosaires.empretienda.com.ar/buzos-y-sweaters/buzo-rock" target="_blank"
+                        class="btn btn-success">Ir a tienda</a>
                 </div>
             </div>
         </section>
@@ -245,8 +228,11 @@
             <!--link e icono de instagram-->
             <a href="https://www.instagram.com/les.bsas/" target="blank"><img class="redes"
                     src="../img/icons8-instagram-old-50.png" alt="instagram" /></a>
+            <!--icono de whatsapp-->
+            <a href="https://web.whatsapp.com/" target="blank"><img class="whatsapp" src="../img/icons8-whatsapp-50.png"
+                    alt="whatsapp" /></a>
         </div>
-        <a class="btn btn-dark" href="./page/signIn.html" role="button">Registrate</a>
+        <a class="btn btn-dark" href="../page/signIn.html" role="button">Registrate</a>
 
         <!--iconos de formas de pago-->
         <div>
