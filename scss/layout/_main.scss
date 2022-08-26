@@ -1,13 +1,13 @@
 main {
     width: 100%;
     height: 100%;
-    background-image: url(../img/2a6e491b-b417-456c-a10f-b81318bf4dd6.jpg);
+    background-image: url(../img/portada.jpg);
     border: 0.20rem solid $color-letras;
     grid-area: main;
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
-    @include medidas (8rem);
+    @include medidas (10rem);
     display: flex;
     justify-content: space-around;
     flex-direction: column;
@@ -49,7 +49,6 @@ h2 {
 .card {
     position: relative;
     display: flex;
-    flex-direction: column;
     min-width: 0;
     word-wrap: break-word;
     background-color:$color-back;
@@ -57,11 +56,20 @@ h2 {
     border: 0.5px solid $color-letras;
     border-radius: 1rem;
     align-items: center;
+    border-radius: 30px;
+    background: transparent;
+    box-shadow: 15px 15px 30px $color-precio, -15px -15px 30px $color-back;
+    flex-wrap: nowrap;
+    align-content: space-around;
+    flex-direction: column;
+    justify-content: space-between;
 }
+
 .card-body {
     flex: 0 1 auto;
     padding: 0rem 3rem;
     margin-bottom: 0.5rem;
+    text-align: center;
 }
 .card-img, .card-img-bottom, .card-img-top {
     width: 100%;
@@ -95,9 +103,22 @@ h2 {
     justify-content: flex-start;
 }
 
+.card-img, .card-img-bottom, .card-img-top-fra {
+    width: 100%;
+    margin-left: 5.5rem;
+    margin-top: 1rem;
+}
+
 .main h1{
     @include size (3rem);
     color:$color-letras;
+    background:$color-back;
+    border-radius: 1rem;
+    padding: 0.4rem;
+    border-bottom: double;
+    text-align: center; 
+    background: transparent;
+    box-shadow: inset 3px 7px 20px 5px $color-precio;
 }
 
 .main h2{
@@ -116,17 +137,34 @@ h2 {
     text-align: center;
 }
 
-.cardSombra {
-    width: 240px;
-    height: 290px;
-    border-radius: 30px;
-    background: #e0e0e0;
-    box-shadow: 15px 15px 30px #bebebe, -15px -15px 30px #ffffff;
-}
 
 .main-contacto{
+    background-image: url(../img/academiadedanza12.jpg);
     font-family: $font-secundaria;
     @include size (1rem);
     font-weight: bolder;
-    padding: 2rem ;
+    @include medidas (2rem);
+}
+
+.nosotros{
+    background-image: url(../img/firmagris.jpg);
+    @include medidas (2rem);
+    background-repeat: repeat-y;
+}
+
+.nosotros h1{
+    @include size (3rem);
+    color: $color-letras;
+    border-radius: 1rem;
+    padding: 0.4rem;
+    border-bottom: double;
+    text-align: center; 
+    background: transparent;
+    box-shadow: inset 3px 7px 20px 5px $color-precio;
+}
+
+.nosotros p{
+    @include size (1.2rem);
+    color: $color-letras;
+    font-weight: bolder;
 }

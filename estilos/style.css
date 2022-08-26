@@ -5,6 +5,8 @@
 }
 
 header {
+  width: 100%;
+  height: 100%;
   background-color: white;
 }
 header .nav {
@@ -82,13 +84,13 @@ input[type]:checked ~ span.middle {
 main {
   width: 100%;
   height: 100%;
-  background-image: url(../img/2a6e491b-b417-456c-a10f-b81318bf4dd6.jpg);
+  background-image: url(../img/portada.jpg);
   border: 0.2rem solid black;
   grid-area: main;
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
-  padding: 8rem;
+  padding: 10rem;
   display: flex;
   justify-content: space-around;
   flex-direction: column;
@@ -129,7 +131,6 @@ h2 {
 .card {
   position: relative;
   display: flex;
-  flex-direction: column;
   min-width: 0;
   word-wrap: break-word;
   background-color: white;
@@ -137,12 +138,20 @@ h2 {
   border: 0.5px solid black;
   border-radius: 1rem;
   align-items: center;
+  border-radius: 30px;
+  background: transparent;
+  box-shadow: 15px 15px 30px darkgray, -15px -15px 30px white;
+  flex-wrap: nowrap;
+  align-content: space-around;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .card-body {
   flex: 0 1 auto;
   padding: 0rem 3rem;
   margin-bottom: 0.5rem;
+  text-align: center;
 }
 
 .card-img, .card-img-bottom, .card-img-top {
@@ -177,9 +186,22 @@ h2 {
   justify-content: flex-start;
 }
 
+.card-img, .card-img-bottom, .card-img-top-fra {
+  width: 100%;
+  margin-left: 5.5rem;
+  margin-top: 1rem;
+}
+
 .main h1 {
   font-size: 3rem;
   color: black;
+  background: white;
+  border-radius: 1rem;
+  padding: 0.4rem;
+  border-bottom: double;
+  text-align: center;
+  background: transparent;
+  box-shadow: inset 3px 7px 20px 5px darkgray;
 }
 
 .main h2 {
@@ -198,23 +220,41 @@ h2 {
   text-align: center;
 }
 
-.cardSombra {
-  width: 240px;
-  height: 290px;
-  border-radius: 30px;
-  background: #e0e0e0;
-  box-shadow: 15px 15px 30px #bebebe, -15px -15px 30px #ffffff;
-}
-
 .main-contacto {
+  background-image: url(../img/academiadedanza12.jpg);
   font-family: "Trispace", sans-serif;
   font-size: 1rem;
   font-weight: bolder;
   padding: 2rem;
 }
 
+.nosotros {
+  background-image: url(../img/firmagris.jpg);
+  padding: 2rem;
+  background-repeat: repeat-y;
+}
+
+.nosotros h1 {
+  font-size: 3rem;
+  color: black;
+  border-radius: 1rem;
+  padding: 0.4rem;
+  border-bottom: double;
+  text-align: center;
+  background: transparent;
+  box-shadow: inset 3px 7px 20px 5px darkgray;
+}
+
+.nosotros p {
+  font-size: 1.2rem;
+  color: black;
+  font-weight: bolder;
+}
+
 /*footer*/
 footer {
+  width: 100%;
+  height: 100%;
   color: black;
   font-family: "Trispace", sans-serif;
   font-size: 2rem;
@@ -275,7 +315,7 @@ p {
     font-family: "Thasadith", sans-serif;
     font-size: 4rem;
     font-weight: lighter;
-    color: darkgray;
+    color: black;
     text-align: center;
     margin-bottom: 0rem;
   }
@@ -283,24 +323,18 @@ p {
     font-family: "Thasadith", sans-serif;
     font-size: 1.5rem;
     font-weight: lighter;
-    color: darkgray;
+    color: black;
     text-align: center;
   }
   .main h3 {
     font-family: "Trispace", sans-serif;
     font-size: 1.5rem;
     font-weight: lighter;
-    color: darkgray;
+    color: black;
     text-align: center;
     margin-bottom: 2rem;
   }
   .main h4 {
-    font-family: "Trispace", sans-serif;
-    font-size: 1rem;
-    font-weight: lighter;
-    color: black;
-  }
-  .main h5 {
     font-family: "Trispace", sans-serif;
     font-size: 1rem;
     font-weight: lighter;
@@ -311,9 +345,7 @@ p {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: repeat 5, 1fr;
-    grid-template-areas: "p1 p2" "p3 p4" "p5 p6" "p7 p8" "p9";
-    grid-column-gap: 2rem;
-    grid-row-gap: 9rem;
+    grid-template-areas: "p1 p2" "p3 p4" "p5 p6" "p7 p8" ".p9";
     justify-items: center;
     justify-content: center;
     align-items: stretch;
@@ -391,32 +423,24 @@ p {
     font-family: "Thasadith", sans-serif;
     font-size: 3rem;
     font-weight: lighter;
-    color: darkgray;
-    text-align: center;
-    margin-bottom: 0rem;
+    color: black;
   }
   .main h2 {
     font-family: "Thasadith", sans-serif;
     font-size: 2rem;
     font-weight: lighter;
-    color: darkgray;
+    color: black;
     text-align: center;
   }
   .main h3 {
     font-family: "Trispace", sans-serif;
     font-size: 2rem;
     font-weight: lighter;
-    color: darkgray;
+    color: black;
     text-align: center;
     margin-bottom: 2rem;
   }
   .main h4 {
-    font-family: "Trispace", sans-serif;
-    font-size: 1.5rem;
-    font-weight: lighter;
-    color: black;
-  }
-  .main h5 {
     font-family: "Trispace", sans-serif;
     font-size: 1.5rem;
     font-weight: lighter;
@@ -456,8 +480,25 @@ p {
     justify-content: space-around;
     flex-direction: column;
     flex-wrap: nowrap;
-    align-content: center;
     align-items: stretch;
+  }
+  /*.nosotros {
+      background-image: url(../img/firma.jpg);
+      background-position: bottom;*/
+  .nosotros h1 {
+    font-family: "Thasadith", sans-serif;
+    font-size: 3rem;
+    font-weight: lighter;
+    color: black;
+    background-color: transparent;
+    border-bottom: double;
+    text-align: center;
+  }
+  .nosotros p {
+    font-family: "Trispace", sans-serif;
+    color: black;
+    font-size: 0.8rem;
+    text-align: center;
   }
   footer {
     display: flex;
