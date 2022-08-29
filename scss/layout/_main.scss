@@ -1,3 +1,4 @@
+/*main index*/
 main {
     width: 100%;
     height: 100%;
@@ -16,22 +17,23 @@ main {
     align-items: center;
     
 }
-
+/*+amor*/
 h1{
     font-family:$font-principal;
     @include size (5rem);
     color:$color-back;
 }
-
+/*temporada*/
 h2 {
     font-family: $font-secundaria;
     @include size (2rem);
     font-weight: bolder;
     color:$color-back;
 } 
-
+/*main de paginas restantes*/
 .main{
-    background-image: linear-gradient(to top, $color-precio, $color-back);
+    background-image: url(../img/academiadedanza12.jpg);
+    background-repeat: repeat-y;
 }
 
 .main .productos{
@@ -46,18 +48,18 @@ h2 {
     margin-top: 1rem;
 }
 
+/*estilos card en gral*/
 .card {
     position: relative;
     display: flex;
     min-width: 0;
     word-wrap: break-word;
-    background-color:$color-back;
     background-clip: border-box;
     border: 0.5px solid $color-letras;
     border-radius: 1rem;
     align-items: center;
     border-radius: 30px;
-    background: transparent;
+    background: $color-back;
     box-shadow: 15px 15px 30px $color-precio, -15px -15px 30px $color-back;
     flex-wrap: nowrap;
     align-content: space-around;
@@ -145,7 +147,7 @@ h2 {
     font-weight: bolder;
     @include medidas (2rem);
 }
-
+/*nosotros*/
 .nosotros{
     background-image: url(../img/firmagris.jpg);
     @include medidas (2rem);

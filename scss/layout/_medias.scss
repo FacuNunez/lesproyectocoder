@@ -18,7 +18,7 @@
         font-weight: bolder;
         @include size (2rem);
     }
-
+    /*main index*/
     h1{
         font-family:$font-principal;
         @include size (4rem);
@@ -29,11 +29,7 @@
         @include size (2rem);
         font-weight: bolder;
     }
-
-    h3{
-        @include size (1rem);
-    }
-
+    /*main restantes*/
     .main{
         padding: 5rem;
     }
@@ -89,7 +85,7 @@
     .p1 .p2 .p3 .p4 .p5 .p6 .p7 .p8 .p9{
         grid-area: p1 p2 p3 p4 p5 p6 p7 p8 p9 
     }
-
+    /*fragancia*/
     .main .fragancia {
         display: flex;
         padding: 7rem;
@@ -109,7 +105,7 @@
         align-content: center;
         align-items: stretch;
     }
-
+    /*pie de pagina*/
     footer{
         display: flex;
         flex-direction: column;
@@ -145,27 +141,29 @@
         @include size (3rem);
     }
 
-    /*main*/
+    /*main principal*/
     main {
         height: 100%;
         width: 100%;
         padding: 12rem;
-    } 
+    }
+
     h1{
         font-family:$font-principal;
         @include size (6rem);
         color:$color-back;
-    }    
+    }  
+    
     h2{
         @include size (3rem);
         font-weight: bolder;
     }
-    h3{
-        @include size (2rem);
-    }
+    /*main restantes*/
     .main{
         padding: 8rem;
+        background-repeat: no-repeat;
     }
+
     .main h1{
         font-family:$font-principal;
         @include size (3rem);
@@ -215,7 +213,7 @@
     .p1 .p2 .p3 .p4 .p5 .p6 .p7 .p8 .p9 {
         grid-area: p1 p2 p3 p4 p5 p6 p7 p8 p9;
     }
-
+    /*fragancia*/
     .main .fragancia{
         display: flex;
         align-items: flex-end;
@@ -238,12 +236,11 @@
         flex-wrap: nowrap;
         align-items: stretch;
     }
+    /*nosotros*/
+    .nosotros{
+        @include medidas (6rem)
+    }
 
-    /*.nosotros {
-        background-image: url(../img/firma.jpg);
-        background-position: bottom;*/
-    
-        
     .nosotros h1{
             font-family:$font-principal;
             @include size (3rem);
@@ -260,8 +257,7 @@
         @include size (0.8rem);
         text-align: center;
     }
-
-
+    /*footer*/
     footer{
         display: flex;
         flex-direction: row;
