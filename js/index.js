@@ -1,5 +1,10 @@
+//DOM
+
+let contenedor = document.getElementById("contenedor");
+let formulario = document.getElementById("formulario")
+
 const productos = [
-    { id: 1, nombre: "Remera Vida", precio: 3000 },
+    { id: 1, nombre: "Remera Vida", precio: 3000,},
     { id: 2, nombre: "Campera Fleco", precio: 6900 },
     { id: 3, nombre: "Sweater Lara", precio: 5250 },
     { id: 4, nombre: "Remeron Animal", precio: 3000 },
@@ -15,36 +20,23 @@ const productos = [
     { id: 14, nombre: "Remera Rolling", precio: 3000 },
 ];
 
-const compras = [];
+//render
 
-let seleccion = prompt("Hola, somos Les Bs.As" + " ," + "empezamos : ");
-if (seleccion == "si") {
-    let mostrar = productos.map(
-        (producto) =>
-        " " + producto.id + "-" + producto.nombre + " $" + producto.precio
-    );
-    alert(mostrar);
-} else if (seleccion == "no") {
-    alert("Gracias, volve pronto! te esperamos!");
-}
+productos.forEach(producto => {
+    let muestra = document.createElement("div")
+    muestra.innerHTML = `
+    <div class="card p1" style="width: 13rem;">
+                <div class="card-body">
+                    <h3 class="card-title">${producto.nombre}</h3>
+                    <h4 class="card-title">${producto.precio}</h4>
+                    <p class="card-text">${producto.id}</p>
+                    <a href="https://lesbuenosaires.empretienda.com.ar/remeras/remera-vida" target="_blank"
+                        class="btn btn-dark">Ir a tienda</a>
+                </div>
+    </div>`
 
-let eleccion = prompt("Ingresa el nombre producto seleccionado: ");
-let encontrado = productos.find((prenda) => prenda.nombre === eleccion);
+    contenedor.append(muestra)
+})
 
-compras.push(`$${encontrado.precio}`);
 
-let seguir = prompt("Desea agrera otra prenda?");
-while (seguir === "si") {
-    eleccion = prompt("Ingresa el nombre producto seleccionado: ");
-    let encontradoDos = productos.find((item) => item.nombre === eleccion);
 
-    compras.push(`$${encontradoDos.precio}`);
-
-    seguir = prompt("Desea agrera otra prenda?");
-}
-
-if (seguir === "no") {
-    compras.forEach((comprasFinal) => {
-        alert(`total: $ ${compras.precio}`);
-    });
-}
