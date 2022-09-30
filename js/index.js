@@ -1,7 +1,6 @@
 //DOM
 
 let contenedor = document.getElementById("contenedor");
-let formulario = document.getElementById("formulario")
 
 const productos = [
     { id: 1, nombre: "Remera Vida", precio: 3000,},
@@ -38,5 +37,23 @@ productos.forEach(producto => {
     contenedor.append(muestra)
 })
 
+let contenedor2 = document.getElementById("contenedor");
 
+let formulario = document.getElementById("formulario");
+formulario.addEventListener("submit", (e) => {
+    e.preventDefault();
+    contenedor2.innerHTML = "";
+    let inputs = e.target.children;
 
+    let producto = productos.find((item) => item.nombre === inputs[0].value);
+    let div = document.createElement("div");
+        div.innerHTML = `
+        <div class="card p1" style="width: 13rem;">
+            <div class="card-body">
+                <h3 class="card-title">${producto.nombre}</h3>
+                <h4 class="card-title">${producto.precio}</h4>
+            </div>
+        </div>`;
+
+    contenedor2.append(div)
+});
